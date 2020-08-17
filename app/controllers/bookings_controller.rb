@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(strong_params)
-    if @booking.save
+    if @booking.save!
       redirect_to booking_path(@booking)
     else
       render :new
