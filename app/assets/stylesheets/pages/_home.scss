@@ -1,1 +1,22 @@
 // Specific CSS for your home-page
+#home-banner{
+  text-align: center;
+  background-image: url("https://res.cloudinary.com/dzjxqunz7/image/upload/v1597679610/chef_gplqgs.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-top: 30px;
+  color: white;
+  height: 100vh;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .btn-light {
+    border-radius: 5px;
+  }
+}
