@@ -7,16 +7,18 @@
   padding-top: 30px;
   color: white;
   height: 100vh;
+  font-family: 'roboto';
 
   h1 {
     margin-bottom: 20px;
   }
 
   p {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .btn-light {
     border-radius: 5px;
+    margin-top: 5px;
   }
 }
