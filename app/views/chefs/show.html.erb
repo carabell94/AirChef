@@ -1,4 +1,3 @@
-
 <div class='chef-info'>
   <% if @chef.photo.attached? %>
     <%= cl_image_tag @chef.photo.key, width: 360 %>
@@ -6,14 +5,11 @@
 
   <h2><%= @chef.name %></h2>
   <h3>Experience: <%= @chef.years_experience %> Years</h3>
-
   <p>Chef Bio: <%= @chef.bio %>Here is some information about the chef blah blah blah. Chef needs to own bio</p>
-
   <p>Hourly Rate: £<%= @chef.hourly_rate.to_i %></p>
   <p>Location: <%= @chef.location %></p>
   <p>Cuisines: <%= @chef.cuisines %></p>
 </div>
-
 <div class='buttons ml-3'>
   <%= link_to "Update", edit_chef_path(@chef), class: 'btn btn-primary mb-2' %>
   <br>
@@ -25,7 +21,6 @@
   <br>
   <%= link_to "Return to 'Browse Chefs'", chefs_path  %>
 </div>
-
 <div class="booking-form-container m-3">
   <h2>Book this Chef:</h2>
   <div class='booking-form'>
@@ -35,7 +30,6 @@
       <%= f.input :location, label: 'Location:' %>
       <%= f.input :duration, label: 'Duration (Hours):', collection: 3..12 %>
       <%= f.input :cuisine, label: 'Preferred Cuisine:' %>
-
       <%= f.submit 'Confirm Booking' %>
     <% end %>
   </div>
