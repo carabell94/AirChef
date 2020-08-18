@@ -1,0 +1,10 @@
+<div class="text-center">
+  <h1>Browse Chefs</h1>
+
+  <div>
+    <% @chefs.each do |chef| %>
+      <%= link_to chef.name, chef_path(chef)%>
+    <% end %>
+  </div>
+
+</div>
