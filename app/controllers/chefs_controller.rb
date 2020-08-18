@@ -26,7 +26,7 @@ class ChefsController < ApplicationController
 
   def update
     @chef = Chef.find(params[:id])
-    if @chef.update
+    if @chef.update(strong_params)
       redirect_to chef_path(@chef)
     else
       render :update
