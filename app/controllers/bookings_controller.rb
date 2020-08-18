@@ -26,7 +26,7 @@ class BookingsController < ApplicationController
 
   def update
     @booking = Booking.find(params[:id])
-    if @booking.update
+    if @booking.update(strong_params)
       redirect_to booking_path(@booking)
     else
       render :update
@@ -42,6 +42,6 @@ class BookingsController < ApplicationController
   private
 
   def strong_params
-    params.require(:booking).permit(:user_id, :date, :guests, :location, :cousine, :booked_user_id, :review_rating, :review_content)
+    params.require(:booking).permit(:user_id, :date, :guests, :location, :cuisine, :booked_user_id, :review_rating, :review_content)
   end
 end
