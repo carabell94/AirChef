@@ -23,15 +23,15 @@ class BookingsController < ApplicationController
   # def edit
   #   @booking = Booking.find(params[:id])
   # end
-
-  # def update
-  #   @booking = Booking.find(params[:id])
-  #   if @booking.update
-  #     redirect_to booking_path(@booking)
-  #   else
-  #     render :update
-  #   end
-  # end
+  
+  def update
+    @booking = Booking.find(params[:id])
+    if @booking.update(strong_params)
+      redirect_to booking_path(@booking)
+    else
+      render :update
+    end
+  end
 
   def destroy
     @booking = Booking.find(params[:id])
