@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2020_08_18_153523) do
     t.string "cuisines"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "bio"
   end
 
   create_table "users", force: :cascade do |t|
