@@ -1,0 +1,11 @@
+<div class='chef-info'>
+  <img src="https://res.cloudinary.com/dzjxqunz7/image/upload/v1597756920/chef_cfjlu0.png" alt="" class="w-25">
+  <h2><%= @chef.name %></h2>
+  <h3>Experience: <%= @chef.years_experience %> Years</h3>
+
+  <p>Hourly Rate: £<%= @chef.hourly_rate %></p>
+  <p>Location: <%= @chef.location %></p>
+  <p>Cuisines: <%= @chef.cuisines %></p>
+</div>
+
+<%= link_to "Return to 'Browse Chefs'", chefs_path  %>
