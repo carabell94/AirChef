@@ -1,0 +1,9 @@
+<h2>Delete Chef</h2>
+
+<ul>
+  <% @chefs.each do | dose| %>
+  <li><%= chef.name %>  <%= link_to chef_path(chef), method: :delete, data: { confirm: "Delete?" } do %>
+      <i class="far fa-trash-alt "></i>
+    <% end %> </li>
+  <% end %>
+</ul>

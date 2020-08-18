@@ -3,11 +3,13 @@
 
   <div class="list-inline">
     <% @chefs.each do |chef| %>
-      <%= link_to chef.name, chef_path(chef)%>
+      <div class="chef-profile">
+        <%= cl_image_tag chef.photo.key, width: 150 %>
+        <%= link_to chef.name, chef_path(chef), class: 'd-block'%>
+      </div>
     <% end %>
   </div>
 
   <%= link_to 'Add Chef', new_chef_path, class: 'btn btn-info mb-2' %>
-  <p> 'Book Chef' button</p>
 
 </div>
