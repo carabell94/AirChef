@@ -1,9 +1,11 @@
 <%= simple_form_for @chef do |f| %>
   <%= f.input :name %>
-  <%= f.input :years_experience %>
-  <%= f.input :hourly_rate %>
+  <%= f.input :bio %>
   <%= f.input :location %>
+  <%= f.input :years_experience, label: 'Number of Years Experience', collection: 1..50 %>
+  <%= f.input :hourly_rate, label: 'Hourly Rate (£)' %>
   <%= f.input :cuisines %>
+  <%= f.input :photo, as: :file %>
 
   <%= f.submit 'confirm', class: "btn btn-primary" %>
 <% end %>

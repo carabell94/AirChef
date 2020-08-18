@@ -13,6 +13,9 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(strong_params)
+    @booking.user = current_user
+    @chef = Chef.find(params[:chef_id])
+    @booking.chef = @chef
     if @booking.save!
       redirect_to booking_path(@booking)
     else
@@ -42,6 +45,6 @@ class BookingsController < ApplicationController
   private
 
   def strong_params
-    params.require(:booking).permit(:user_id, :date, :guests, :location, :cuisine, :chef_id, :review_rating, :review_content)
+    params.require(:booking).permit(:user_id, :date, :guests, :location, :cuisine, :chef_id, :review_rating, :review_content, :duration)
   end
 end
