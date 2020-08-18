@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2020_08_18_153523) do
     t.text "review_content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "duration"
     t.index ["chef_id"], name: "index_bookings_on_chef_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end

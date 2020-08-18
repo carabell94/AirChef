@@ -13,6 +13,9 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(strong_params)
+    @booking.user = current_user
+    @chef = Chef.find(params[:chef_id])
+    @booking.chef = @chef
     if @booking.save!
       redirect_to booking_path(@booking)
     else
@@ -23,15 +26,15 @@ class BookingsController < ApplicationController
   # def edit
   #   @booking = Booking.find(params[:id])
   # end
-  
-  def update
-    @booking = Booking.find(params[:id])
-    if @booking.update(strong_params)
-      redirect_to booking_path(@booking)
-    else
-      render :update
-    end
-  end
+
+  # def update
+  #   @booking = Booking.find(params[:id])
+  #   if @booking.update(strong_params)
+  #     redirect_to booking_path(@booking)
+  #   else
+  #     render :update
+  #   end
+  # end
 
   def destroy
     @booking = Booking.find(params[:id])
@@ -42,6 +45,6 @@ class BookingsController < ApplicationController
   private
 
   def strong_params
-    params.require(:booking).permit(:user_id, :date, :guests, :location, :cuisine, :chef_id, :review_rating, :review_content)
+    params.require(:booking).permit(:user_id, :date, :guests, :location, :cuisine, :chef_id, :review_rating, :review_content, :duration)
   end
 end
