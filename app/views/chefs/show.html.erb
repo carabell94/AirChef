@@ -8,4 +8,8 @@
   <p>Cuisines: <%= @chef.cuisines %></p>
 </div>
 
+<%= link_to "Update", edit_chef_path(@chef) %>
+<br>
+<%= link_to "Delete", chef_path(@chef), method: :delete, data: { confirm: "Delete?" } %>
+<br>
 <%= link_to "Return to 'Browse Chefs'", chefs_path  %>
