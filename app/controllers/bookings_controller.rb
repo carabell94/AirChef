@@ -1,11 +1,11 @@
 class BookingsController < ApplicationController
-  def index
-    @bookings = Booking.all
-  end
+  # def index
+  #   @bookings = Booking.all
+  # end
 
-  def show
-    @booking = Booking.find(params[:id])
-  end
+  # def show
+  #   @booking = Booking.find(params[:id])
+  # end
 
   def new
     @booking = Booking.new
@@ -20,10 +20,10 @@ class BookingsController < ApplicationController
     end
   end
 
-  def edit
-    @booking = Booking.find(params[:id])
-  end
-
+  # def edit
+  #   @booking = Booking.find(params[:id])
+  # end
+  
   def update
     @booking = Booking.find(params[:id])
     if @booking.update(strong_params)

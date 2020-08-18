@@ -8,8 +8,14 @@
   <p>Cuisines: <%= @chef.cuisines %></p>
 </div>
 
-<%= link_to "Update", edit_chef_path(@chef) %>
-<br>
-<%= link_to "Delete", chef_path(@chef), method: :delete, data: { confirm: "Delete?" } %>
-<br>
-<%= link_to "Return to 'Browse Chefs'", chefs_path  %>
+<div class='buttons'>
+  <%= link_to "Update", edit_chef_path(@chef), class: 'btn btn-primary mb-2' %>
+  <br>
+  <%= link_to chef_path(@chef),
+              method: :delete,
+              data: { confirm: "Are you sure you want to delete?" }, class: 'btn btn-danger mb-2' do %>
+              Delete <i class="far fa-trash-alt"></i>
+              <% end %>
+  <br>
+  <%= link_to "Return to 'Browse Chefs'", chefs_path  %>
+</div>
