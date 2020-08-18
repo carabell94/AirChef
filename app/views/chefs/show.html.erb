@@ -2,6 +2,7 @@
   <% if @chef.photo.attached? %>
     <%= cl_image_tag @chef.photo.key, width: 360 %>
   <% end %>
+
   <h2><%= @chef.name %></h2>
   <h3>Experience: <%= @chef.years_experience %> Years</h3>
   <p>Chef Bio: <%= @chef.bio %>Here is some information about the chef blah blah blah. Chef needs to own bio</p>
