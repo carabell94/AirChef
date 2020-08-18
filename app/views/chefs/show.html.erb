@@ -3,7 +3,7 @@
   <h2><%= @chef.name %></h2>
   <h3>Experience: <%= @chef.years_experience %> Years</h3>
 
-  <p>Hourly Rate: £<%= @chef.hourly_rate %></p>
+  <p>Hourly Rate: £<%= @chef.hourly_rate.to_i %></p>
   <p>Location: <%= @chef.location %></p>
   <p>Cuisines: <%= @chef.cuisines %></p>
 </div>
