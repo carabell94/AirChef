@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_17_161248) do
+ActiveRecord::Schema.define(version: 2020_08_18_102607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,23 +21,23 @@ ActiveRecord::Schema.define(version: 2020_08_17_161248) do
     t.integer "guests"
     t.string "location"
     t.string "cuisine"
-    t.bigint "booked_user_id"
+    t.bigint "chef_id", null: false
     t.integer "review_rating"
-    t.string "review_content"
+    t.text "review_content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["booked_user_id"], name: "index_bookings_on_booked_user_id"
+    t.index ["chef_id"], name: "index_bookings_on_chef_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
-  create_table "messages", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "booking_id", null: false
-    t.string "content"
+  create_table "chefs", force: :cascade do |t|
+    t.string "name"
+    t.integer "years_experience"
+    t.float "hourly_rate"
+    t.string "location"
+    t.string "cuisines"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["booking_id"], name: "index_messages_on_booking_id"
-    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -48,18 +48,10 @@ ActiveRecord::Schema.define(version: 2020_08_17_161248) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "name"
-    t.boolean "chef"
-    t.integer "years_experience"
-    t.string "location"
-    t.integer "hourly_rate"
-    t.string "cuisine"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "chefs"
   add_foreign_key "bookings", "users"
-  add_foreign_key "bookings", "users", column: "booked_user_id"
-  add_foreign_key "messages", "bookings"
-  add_foreign_key "messages", "users"
 end
