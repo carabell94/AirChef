@@ -1,7 +1,7 @@
 <div class="text-center">
   <h1>Browse Chefs</h1>
 
-  <div>
+  <div class="list-inline">
     <% @chefs.each do |chef| %>
       <%= link_to chef.name, chef_path(chef)%>
     <% end %>
