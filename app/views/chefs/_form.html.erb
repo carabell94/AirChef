@@ -1,0 +1,9 @@
+<%= simple_form_for @chef do |f| %>
+  <%= f.input :name %>
+  <%= f.input :years_experience %>
+  <%= f.input :hourly_rate %>
+  <%= f.input :location %>
+  <%= f.input :cuisines %>
+
+  <%= f.submit, class: "btn btn-primary" %>
+<% end %>
