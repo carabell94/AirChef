@@ -4,8 +4,10 @@
   <div class="list-inline">
     <% @chefs.each do |chef| %>
       <div class="chef-profile">
-        <%= cl_image_tag chef.photo.key, width: 150 %>
-        <%= link_to chef.name, chef_path(chef), class: 'd-block'%>
+        <% if chef.photo.attached? %>
+          <%= cl_image_tag chef.photo.key, width: 150 %>
+        <% end %>
+          <%= link_to chef.name, chef_path(chef), class: 'd-block'%>
       </div>
     <% end %>
   </div>

@@ -1,6 +1,8 @@
 
 <div class='chef-info'>
-  <%= cl_image_tag @chef.photo.key, width: 360 %>
+  <% if @chef.photo.attached? %>
+    <%= cl_image_tag @chef.photo.key, width: 360 %>
+  <% end %>
 
   <h2><%= @chef.name %></h2>
   <h3>Experience: <%= @chef.years_experience %> Years</h3>
