@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-ned = Chef.create(name: "Ned",  years_experience:10, hourly_rate:10, location: "London", cousines:["Japanise", "British", "Italian"])
+ned = Chef.create(name: "Ned",  years_experience:10, hourly_rate:10, location: "London", cuisines:["Japanise", "British", "Italian"])
 
 rosaline = Chef.create(name: "Rosaline",  years_experience:12, hourly_rate:20, location: "Madrid", cuisines:"Spanish")
 
