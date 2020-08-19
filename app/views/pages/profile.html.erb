@@ -1,6 +1,6 @@
 <div class="container">
 
-  <div class="profile-container">
+  <div class="profile-container mt-3">
   <h1>My Profile</h1>
 </div>
 <div class="profile">
@@ -9,16 +9,16 @@
 </div>
 
 <div>
-  <h1 class="bookings-header">My Bookings</h1>
+  <h1 class="bookings-header mb-4">My Bookings</h1>
 <div class="bookings">
 <% @bookings.each do |booking| %>
 
 <div class="booking">
-  <p>Name of Chef: <%= booking.chef.name %></p>
-  <p>Date: <%= booking.date %></p>
-  <p>Cuisine: <%= booking.cuisine %></p>
-  <p>Location: <%= booking.location.capitalize %></p>
-  <p>Number of Guests: <%= booking.guests %></p>
+  <p><strong>Name of Chef:</strong> <%= booking.chef.name %></p>
+  <p><strong>Date:</strong> <%= booking.date.strftime("%d %B %Y") %></p>
+  <p><strong>Cuisine:</strong> <%= booking.cuisine %></p>
+  <p><strong>Location:</strong> <%= booking.location.capitalize %></p>
+  <p><strong>Number of Guests:</strong> <%= booking.guests %></p>
 </div>
 <% end %>
 </div>

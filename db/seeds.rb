@@ -16,7 +16,7 @@ toni = Chef.create!(name: "Toni", bio: 'Bubbly Toni is a whizz in the kitchen.',
 
 arthur = Chef.create!(name: "Arthur",  bio: "Don't let his calm exterior fool you, Arthur has been whipping up French delicacies since he was old enough to reach the counter-top. ", years_experience: 15, hourly_rate: 25, location: "London", cuisines:"French")
 
-piotr = Chef.create!(name: "Piotr", bio: 'Trust Piotr for delicious Polish cuisine.',  years_experience: 15, hourly_rate: 25, location: "Krakov", cuisines:"Polish")
+piotr = Chef.create!(name: "Piotr", bio: 'Trust Piotr for delicious Polish cuisine.',  years_experience: 15, hourly_rate: 25, location: "Krakow", cuisines:"Polish")
 
 rahul = Chef.create!(name: "Rahul",  bio: 'Rahul is the definition of service with a smile.', years_experience: 17, hourly_rate: 30, location: "London", cuisines: "Indian, British")
 

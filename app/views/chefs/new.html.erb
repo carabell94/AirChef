@@ -1,4 +1,8 @@
-<h1>Creating a new chef</h1>
-<%= render 'form', chef: @chef %>
+<div class="text-center">
+  <h1 class="update-header mb-4">Add Your Services</h1>
 
-<%= link_to 'Back', chefs_path, class: 'btn btn-danger mt-3' %>
+  <div class="services-form">
+    <%= render 'form', chef: @chef %>
+    <%= link_to 'Back', chefs_path, class: 'btn btn-danger mt-1 mb-3' %>
+  </div>
+</div>
