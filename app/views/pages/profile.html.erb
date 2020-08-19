@@ -1,5 +1,22 @@
-<div class=>,</div>
-<h1>My Profile</h1>
-<p><%= @user.email %></p>
+
+<div class="profile">
+  <h1>My Profile</h1>
+  <p>Email Address: <%= @user.email %></p>
+</div>
+
+<div class="bookings">
+  <h2>My Bookings</h2>
+<% @bookings.each do |booking| %>
+
+<div class="booking">
+  <p>Name of Chef: <%= booking.chef_id %></p>
+  <p>Date: <%= booking.date %></p>
+  <p>Cuisine: <%= booking.cuisine %></p>
+  <p>Location: <%= booking.location.capitalize %></p>
+  <p>Number of Guests: <%= booking.guests %></p>
+</div>
+<% end %>
+</div>
+
 
 
