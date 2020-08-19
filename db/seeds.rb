@@ -6,37 +6,42 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-ned = Chef.create(name: "Ned",  years_experience:10, hourly_rate:10, location: "London", cuisines:["Japanise", "British", "Italian"])
+user1 = User.create!(email: "user1@user1.com", password: "123456")
 
-rosaline = Chef.create(name: "Rosaline",  years_experience:12, hourly_rate:20, location: "Madrid", cuisines:"Spanish")
+user2 = User.create!(email: "user2@user2.com", password: "123456")
 
-warner = Chef.create(name: "Warner",  years_experience:15, hourly_rate:25, location: "New York", cuisines:"Modern American")
+julio = Chef.create!(name: "Julio",  bio: "Julio's cooking is as great as his moustache.", years_experience: 10, hourly_rate: 10, location: "Madrid", cuisines: "Spanish" )
 
-yael = Chef.create(name: "Yael",  years_experience:15, hourly_rate:25, location: "Tel Aviv", cuisines:"Middle Eastern")
+toni = Chef.create!(name: "Toni", bio: 'Bubbly Toni is a whizz in the kitchen.',  years_experience: 12, hourly_rate: 20, location: "Berlin", cuisines:"German")
 
-mila = Chef.create(name: "Mila",  years_experience:17, hourly_rate:30, location: "Sofia", cuisines:"Bulgarian")
+arthur = Chef.create!(name: "Arthur",  bio: "Don't let his calm exterior fool you, Arthur has been whipping up French delicacies since he was old enough to reach the counter-top. ", years_experience: 15, hourly_rate: 25, location: "London", cuisines:"French")
 
-lean = Chef.create(name: "Lean",  years_experience:10, hourly_rate:20, location: "Manchester", cuisines:["British", "Irish"])
+piotr = Chef.create!(name: "Piotr", bio: 'Trust Piotr for delicious Polish cuisine.',  years_experience: 15, hourly_rate: 25, location: "Krakov", cuisines:"Polish")
 
-qiana = Chef.create(name: "Qiana",  years_experience:5, hourly_rate:12, location: "Budapest", cuisines:["Eastern European", "Italian"])
+rahul = Chef.create!(name: "Rahul",  bio: 'Rahul is the definition of service with a smile.', years_experience: 17, hourly_rate: 30, location: "London", cuisines: "Indian, British")
 
-rosenda = Chef.create(name: "Rosenda",  years_experience:20, hourly_rate:35, location: "Monaco", cuisines:["French", "Italian", "Mexican"])
+lucy = Chef.create!(name: "Lucy",  bio: "She may be young, but Lucy's food tastes like she has been cooking for years and years.", years_experience: 10, hourly_rate: 20, location: "London", cuisines:"British")
 
-kip = Chef.create(name: "Kip",  years_experience:20, hourly_rate:40, location: "Rome", cuisines:["French", "Italian"])
+nicolas = Chef.create!(name: "Nicolas",  bio: 'Sample Bio for Chef Goes Here', years_experience: 5, hourly_rate: 12, location: "Paris", cuisines: "Eastern European, Italian")
 
-troy = Chef.create(name: "Troy",  years_experience:20, hourly_rate:45, location: "Los Angeles", cuisines:["French", "Mexican", "Italian"])
+alex = Chef.create!(name: "Alex",  bio: 'Sample Bio for Chef Goes Here', years_experience: 20, hourly_rate: 35, location: "Monaco", cuisines: "French, Italian, Mexican")
 
-dani = Chef.create(name: "Dani",  years_experience:10, hourly_rate:35, location: "Paris", cuisines:["French", "Italian"])
+rebecca = Chef.create!(name: "Rebecca", bio: 'Sample Bio for Chef Goes Here',  years_experience: 20, hourly_rate: 40, location: "Rome", cuisines:"French, Italian")
 
-cara = Chef.create(name: "Cara",  years_experience:30, hourly_rate:60, location: "Dublin", cuisines:"Irish")
+leonard = Chef.create!(name: "Leonard", bio: 'Sample Bio for Chef Goes Here',  years_experience:20, hourly_rate: 100, location: "Los Angeles", cuisines: "French, Italian, Mexican")
 
-fernando = Chef.create(name: "Fernando",  years_experience:1, hourly_rate:15, location: "Valencia", cuisines:"Spanish")
+lu = Chef.create!(name: "Lu",  bio: 'Sample Bio for Chef Goes Here', years_experience: 10, hourly_rate: 35, location: "Paris", cuisines:"French, Italian")
 
-shaun = Chef.create(name: "Shaun",  years_experience:9, hourly_rate:22, location: "Mayfair", cuisines:"British")
+cara = Chef.create!(name: "Cara",  bio: 'Sample Bio for Chef Goes Here', years_experience: 30, hourly_rate: 60, location: "Belfast", cuisines:"Irish")
 
-# private_dinner = Booking.create(user:User.find(1), date:Time.now, guests: 2, location:"london", cuisine: "Italian", chef:Chef.find(12))
+fernando = Chef.create!(name: "Fernando",  bio: 'Sample Bio for Chef Goes Here', years_experience: 1, hourly_rate: 15, location: "Valencia", cuisines: "Spanish")
 
-# kids_party = Booking.create(user:User.find(2), date:Time.now, guests: 30, location:"london", cuisine: "French", chef:Chef.find(13))
+shaun = Chef.create!(name: "Shaun",  bio: 'Sample Bio for Chef Goes Here', years_experience: 9, hourly_rate: 22, location: "London", cuisines: "British")
+
+private_dinner = Booking.create!(user: user1, date:Time.now, duration: 5, guests: 2, location:"Madrid", cuisine: "Spanish", chef: julio)
+
+kids_party = Booking.create!(user: user2, date:Time.now, duration: 5, guests: 30, location:"London", cuisine: "French", chef: arthur)
+
 
 
 
