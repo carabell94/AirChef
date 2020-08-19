@@ -3,15 +3,18 @@
     <%= cl_image_tag @chef.photo.key, width: 360 %>
   <% end %>
 
-  <h2><%= @chef.name %></h2>
-  <h3>Experience: <%= @chef.years_experience %> Years</h3>
-  <p>Chef Bio: <%= @chef.bio %></p>
-  <p>Hourly Rate: £<%= @chef.hourly_rate.to_i %></p>
-  <p>Location: <%= @chef.location %></p>
-  <p>Cuisines: <%= @chef.cuisines %></p>
+  <h2 id="chef-name"><%= @chef.name %></h2>
+  <h3 id="experience"><%= @chef.years_experience %> Years Experience</h3>
+  <div class='chef-deets'>
+    <p>Bio: <%= @chef.bio %></p>
+    <p>Hourly Rate: £<%= @chef.hourly_rate.to_i %></p>
+    <p>Location: <%= @chef.location %></p>
+    <p>Cuisine(s): <%= @chef.cuisines %></p>
+  </div>
 </div>
+
 <div class='buttons ml-3'>
-  <%= link_to "Update", edit_chef_path(@chef), class: 'btn btn-primary mb-2' %>
+  <%= link_to "Update", edit_chef_path(@chef), class: 'btn btn-info mb-2' %>
   <br>
   <%= link_to chef_path(@chef),
               method: :delete,
@@ -19,7 +22,7 @@
               Delete <i class="far fa-trash-alt"></i>
               <% end %>
   <br>
-  <%= link_to "Return to 'Browse Chefs'", chefs_path  %>
+  <%= link_to "Return to 'Browse Chefs'", chefs_path, class: 'btn btn-info'  %>
 </div>
 <div class="booking-form-container m-3">
   <h2>Book this Chef:</h2>
