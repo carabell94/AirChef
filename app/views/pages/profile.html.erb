@@ -8,21 +8,23 @@
   <p id="email"><strong>Email Address:</strong> <%= @user.email %></p>
 </div>
 
-<div>
-  <h1 class="bookings-header mb-4">My Bookings</h1>
-<div class="bookings">
-<% @bookings.each do |booking| %>
+  <div>
+    <h1 class="bookings-header mb-4">My Bookings</h1>
+    <div class="bookings">
+      <% @bookings.each do |booking| %>
 
-<div class="booking">
-  <p><strong>Name of Chef:</strong> <%= booking.chef.name %></p>
-  <p><strong>Date:</strong> <%= booking.date.strftime("%d %B %Y") %></p>
-  <p><strong>Cuisine:</strong> <%= booking.cuisine %></p>
-  <p><strong>Location:</strong> <%= booking.location.capitalize %></p>
-  <p><strong>Number of Guests:</strong> <%= booking.guests %></p>
-</div>
-<% end %>
-</div>
-</div>
+      <div class="booking">
+        <p><strong>Name of Chef:</strong> <%= booking.chef.name %></p>
+        <p><strong>Date:</strong> <%= booking.date.strftime("%d %B %Y") %></p>
+        <p><strong>Cuisine:</strong> <%= booking.cuisine %></p>
+        <p><strong>Location:</strong> <%= booking.location.capitalize %></p>
+        <p><strong>Number of Guests:</strong> <%= booking.guests %></p>
+      </div>
+      <% end %>
+    </div>
+    <%= link_to "Return to 'Browse Chefs'", chefs_path, class: 'btn btn-info mb-3'  %>
+
+  </div>
 </div>
 
 
