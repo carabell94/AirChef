@@ -22,4 +22,30 @@
   box-shadow: 0 0 8px;
   margin-top: 0px;
   border-radius: 5px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.chef-info {
+  width: 25%;
+}
+
+.cloudinary-img {
+  margin-top: 16px;
+}
+
+.book-chef {
+  font-family: 'pacifico', cursive;
+}
+
+.booking-form-container {
+  width: 30%;
+}
+
+.chef-profile-page-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
