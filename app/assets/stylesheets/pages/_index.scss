@@ -3,6 +3,7 @@
 
 .browse-chefs {
   font-family: 'pacifico', cursive;
+  font-size: 56px;
 }
 
 .chef-profile {
@@ -11,10 +12,17 @@
   padding: 16px;
   text-align: center;
   transition: 0.3s;
+  width: 28%;
+  margin: 0px 24px 24px 24px;
 
     .chef-name {
-    font-size: 24px;
+    font-size: 32px;
     color: #051a23;
+    font-family: 'pacifico', cursive;
+
+    .chef-name:hover {
+      text-decoration: none;
+    }
   }
 
   .chef-details {
@@ -26,10 +34,11 @@
   }
 }
 
-.container {
+.chef-container {
   margin-top: 50px;
   margin-bottom: 50px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 

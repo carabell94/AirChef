@@ -1,12 +1,10 @@
 <div class="text-center">
   <h1 class="browse-chefs mt-3">Browse Chefs</h1>
-  <div class="list-inline">
-    <% @chefs.each do |chef| %>
-
-    <div class="container">
+    <div class="chef-container">
+      <% @chefs.each do |chef| %>
       <div class="chef-profile">
         <% if chef.photo.attached? %>
-          <%= cl_image_tag chef.photo.key, width: 150 %>
+          <%= cl_image_tag chef.photo.key, width: 250 %>
         <% end %>
           <%= link_to chef.name, chef_path(chef), class: 'd-block chef-name'%>
           <div class='chef-details'>
@@ -14,9 +12,8 @@
             <p>Hourly Rate: £<%= chef.hourly_rate.to_i %></p>
           </div>
       </div>
+    <% end %>
     </div>
 
-    <% end %>
-  </div>
   <%= link_to 'Add Chef', new_chef_path, class: 'btn btn-info mb-2' %>
 </div>
