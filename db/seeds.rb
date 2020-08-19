@@ -22,7 +22,7 @@ rahul = Chef.create!(name: "Rahul",  bio: 'Rahul is the definition of service wi
 
 lucy = Chef.create!(name: "Lucy",  bio: "She may be young, but Lucy's food tastes like she has been cooking for years and years.", years_experience: 10, hourly_rate: 20, location: "London", cuisines:"British")
 
-nicolas = Chef.create!(name: "Nicolas",  bio: 'Sample Bio for Chef Goes Here', years_experience: 5, hourly_rate: 12, location: "Budapest", cuisines: "Eastern European, Italian")
+nicolas = Chef.create!(name: "Nicolas",  bio: 'Sample Bio for Chef Goes Here', years_experience: 5, hourly_rate: 12, location: "Paris", cuisines: "Eastern European, Italian")
 
 alex = Chef.create!(name: "Alex",  bio: 'Sample Bio for Chef Goes Here', years_experience: 20, hourly_rate: 35, location: "Monaco", cuisines: "French, Italian, Mexican")
 
