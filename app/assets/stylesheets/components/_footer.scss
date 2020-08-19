@@ -10,3 +10,86 @@
 #authors {
   font-size: 8px;
 }
+.social {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.social li {
+  list-style: none;
+}
+.social li a {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  margin: 0 20px;
+  transition: 0.5s;
+}
+.social li a span {
+  position: absolute;
+  transition: transform 0.5s;
+}
+.social li a span:nth-child(1),
+.social li a span:nth-child(3) {
+  width: 100%;
+  height: 1px;
+  background: white;
+}
+.social li a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform-origin: right;
+}
+.social li a:hover span:nth-child(1) {
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.social li a span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+}
+.social li a:hover span:nth-child(3) {
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+.social li a span:nth-child(2),
+.social li a span:nth-child(4) {
+  width: 1px;
+  height: 100%;
+  background: white;
+}
+.social li a span:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+.social li a:hover span:nth-child(2) {
+  transform-origin: top;
+  transform: scaleY(1);
+  transition: transform 0.5s;
+}
+.social li a span:nth-child(4) {
+  top: 0;
+  right: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.social li a:hover span:nth-child(4) {
+  transform-origin: bottom;
+  transform: scaleY(1);
+  transition: transform 0.5s;
+}
