@@ -20,17 +20,17 @@ yael = Chef.create!(name: "Yael", bio: 'Sample Bio for Chef Goes Here',  years_e
 
 mila = Chef.create!(name: "Mila",  bio: 'Sample Bio for Chef Goes Here', years_experience: 17, hourly_rate: 30, location: "Sofia", cuisines:"Bulgarian")
 
-lean = Chef.create!(name: "Lean",  bio: 'Sample Bio for Chef Goes Here', years_experience: 10, hourly_rate: 20, location: "Manchester", cuisines:["British", "Irish"])
+lean = Chef.create!(name: "Lean",  bio: 'Sample Bio for Chef Goes Here', years_experience: 10, hourly_rate: 20, location: "Manchester", cuisines:"British, Irish")
 
-qiana = Chef.create!(name: "Qiana",  bio: 'Sample Bio for Chef Goes Here', years_experience: 5, hourly_rate: 12, location: "Budapest", cuisines:["Eastern European", "Italian"])
+qiana = Chef.create!(name: "Qiana",  bio: 'Sample Bio for Chef Goes Here', years_experience: 5, hourly_rate: 12, location: "Budapest", cuisines:"Eastern European, Italian")
 
-rosenda = Chef.create!(name: "Rosenda",  bio: 'Sample Bio for Chef Goes Here', years_experience: 20, hourly_rate: 35, location: "Monaco", cuisines:["French", "Italian", "Mexican"])
+rosenda = Chef.create!(name: "Rosenda",  bio: 'Sample Bio for Chef Goes Here', years_experience: 20, hourly_rate: 35, location: "Monaco", cuisines:"French, Italian, Mexican")
 
-kip = Chef.create!(name: "Kip", bio: 'Sample Bio for Chef Goes Here',  years_experience: 20, hourly_rate: 40, location: "Rome", cuisines:["French", "Italian"])
+kip = Chef.create!(name: "Kip", bio: 'Sample Bio for Chef Goes Here',  years_experience: 20, hourly_rate: 40, location: "Rome", cuisines:"French, Italian")
 
-troy = Chef.create!(name: "Troy", bio: 'Sample Bio for Chef Goes Here',  years_experience:20, hourly_rate: 45, location: "Los Angeles", cuisines:["French", "Mexican", "Italian"])
+troy = Chef.create!(name: "Troy", bio: 'Sample Bio for Chef Goes Here',  years_experience:20, hourly_rate: 45, location: "Los Angeles", cuisines:"French, Mexican, Italian")
 
-dani = Chef.create!(name: "Dani",  bio: 'Sample Bio for Chef Goes Here', years_experience: 10, hourly_rate: 35, location: "Paris", cuisines:["French", "Italian"])
+dani = Chef.create!(name: "Dani",  bio: 'Sample Bio for Chef Goes Here', years_experience: 10, hourly_rate: 35, location: "Paris", cuisines:"French, Italian")
 
 cara = Chef.create!(name: "Cara",  bio: 'Sample Bio for Chef Goes Here', years_experience: 30, hourly_rate: 60, location: "Belfast", cuisines:"Irish")
 
