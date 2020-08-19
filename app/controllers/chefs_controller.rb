@@ -43,6 +43,6 @@ class ChefsController < ApplicationController
   private
 
   def strong_params
-    params.require(:chef).permit(:name, :years_experience, :hourly_rate, :location, :cuisines, :photo)
+    params.require(:chef).permit(:name, :years_experience, :hourly_rate, :location, :cuisines, :bio, :photo)
   end
 end
