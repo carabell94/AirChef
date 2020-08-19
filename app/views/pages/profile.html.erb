@@ -1,0 +1,27 @@
+<div class="container">
+
+  <div class="profile-container">
+  <h1>My Profile</h1>
+</div>
+<div class="profile">
+  <p>Email Address: <%= @user.email %></p>
+</div>
+
+<div>
+  <h2>My Bookings</h2>
+<div class="bookings">
+<% @bookings.each do |booking| %>
+
+<div class="booking">
+  <p>Name of Chef: <%= booking.chef.name %></p>
+  <p>Date: <%= booking.date %></p>
+  <p>Cuisine: <%= booking.cuisine %></p>
+  <p>Location: <%= booking.location.capitalize %></p>
+  <p>Number of Guests: <%= booking.guests %></p>
+</div>
+<% end %>
+</div>
+</div>
+</div>
+
+
