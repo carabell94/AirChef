@@ -34,9 +34,9 @@ fernando = Chef.create(name: "Fernando",  years_experience:1, hourly_rate:15, lo
 
 shaun = Chef.create(name: "Shaun",  years_experience:9, hourly_rate:22, location: "Mayfair", cuisines:"British")
 
-private_dinner = Booking.create(user:User.find(1), date:Time.now, guests: 2, location:"london", cuisine: "Italian", chef:Chef.find(12))
+# private_dinner = Booking.create(user:User.find(1), date:Time.now, guests: 2, location:"london", cuisine: "Italian", chef:Chef.find(12))
 
-kids_party = Booking.create(user:User.find(2), date:Time.now, guests: 30, location:"london", cuisine: "French", chef:Chef.find(13))
+# kids_party = Booking.create(user:User.find(2), date:Time.now, guests: 30, location:"london", cuisine: "French", chef:Chef.find(13))
 
 
 
