@@ -28,7 +28,7 @@ alex = Chef.create!(name: "Alex",  bio: 'Sample Bio for Chef Goes Here', years_e
 
 rebecca = Chef.create!(name: "Rebecca", bio: 'Sample Bio for Chef Goes Here',  years_experience: 20, hourly_rate: 40, location: "Rome", cuisines:"French, Italian")
 
-katherine = Chef.create!(name: "Katherine", bio: 'Sample Bio for Chef Goes Here',  years_experience:20, hourly_rate: 45, location: "Los Angeles", cuisines: "French, Italian, Mexican")
+leonard = Chef.create!(name: "Leonard", bio: 'Sample Bio for Chef Goes Here',  years_experience:20, hourly_rate: 100, location: "Los Angeles", cuisines: "French, Italian, Mexican")
 
 lu = Chef.create!(name: "Lu",  bio: 'Sample Bio for Chef Goes Here', years_experience: 10, hourly_rate: 35, location: "Paris", cuisines:"French, Italian")
 
