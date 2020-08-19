@@ -10,11 +10,15 @@
 
     .chef-name {
     font-size: 24px;
-    font-color: #051a23;
+    color: #051a23;
   }
 
   .chef-details {
     font-size: 14px;
+
+    p {
+      margin-bottom: 0px;
+    }
   }
 
 }

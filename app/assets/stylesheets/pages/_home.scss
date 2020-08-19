@@ -26,3 +26,7 @@
     font-family: 'pacifico', cursive;
   }
 }
+
+.min-height {
+  min-height: calc(100vh - 210px);
+}
