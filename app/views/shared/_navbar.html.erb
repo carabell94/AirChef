@@ -23,7 +23,7 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
-          <%= image_tag "avatar-chef.23.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%= image_tag "avatar.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right drops" aria-labelledby="navbarDropdown">
             <%= link_to "Messages", "#", class: "dropdown-item" %>
             <%= link_to "Profile", profile_path, class: "dropdown-item" %>
@@ -38,3 +38,4 @@
     </ul>
   </div>
 </div>
+<a href="#" class="back-home"><i class="fas fa-arrow-circle-up"></i></a>
