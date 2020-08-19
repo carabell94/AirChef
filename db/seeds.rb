@@ -30,6 +30,8 @@ rebecca = Chef.create!(name: "Rebecca", bio: 'Sample Bio for Chef Goes Here',  y
 
 leonard = Chef.create!(name: "Leonard", bio: 'Sample Bio for Chef Goes Here',  years_experience:20, hourly_rate: 100, location: "Los Angeles", cuisines: "French, Italian, Mexican")
 
+jakob = Chef.create!(name: "Jakob", bio: 'Sample Bio for Chef Goes Here',  years_experience:20, hourly_rate: 100, location: "Ibiza", cuisines: "French, Italian, Mexican")
+
 lu = Chef.create!(name: "Lu",  bio: 'Sample Bio for Chef Goes Here', years_experience: 10, hourly_rate: 35, location: "Paris", cuisines:"French, Italian")
 
 cara = Chef.create!(name: "Cara",  bio: 'Sample Bio for Chef Goes Here', years_experience: 30, hourly_rate: 60, location: "Belfast", cuisines:"Irish")
