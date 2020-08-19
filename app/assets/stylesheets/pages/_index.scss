@@ -22,7 +22,7 @@
     color: #051a23;
     font-family: 'pacifico', cursive;
 
-    .chef-name:hover {
+    &:hover {
       text-decoration: none;
     }
   }
@@ -60,3 +60,5 @@
     transform: scale(1.1);
   }
 }
+
+
