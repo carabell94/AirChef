@@ -1,36 +1,39 @@
-<div class='chef-info ml-3'>
-  <% if @chef.photo.attached? %>
-    <%= cl_image_tag @chef.photo.key, width: 360 %>
-  <% end %>
-
-  <h2><%= @chef.name %></h2>
-  <h3>Experience: <%= @chef.years_experience %> Years</h3>
-  <p>Chef Bio: <%= @chef.bio %></p>
-  <p>Hourly Rate: £<%= @chef.hourly_rate.to_i %></p>
-  <p>Location: <%= @chef.location %></p>
-  <p>Cuisines: <%= @chef.cuisines %></p>
-</div>
-<div class='buttons ml-3'>
-  <%= link_to "Update", edit_chef_path(@chef), class: 'btn btn-primary mb-2' %>
-  <br>
-  <%= link_to chef_path(@chef),
-              method: :delete,
-              data: { confirm: "Are you sure you want to delete?" }, class: 'btn btn-danger mb-2' do %>
-              Delete <i class="far fa-trash-alt"></i>
-              <% end %>
-  <br>
-  <%= link_to "Return to 'Browse Chefs'", chefs_path  %>
-</div>
-<div class="booking-form-container m-3">
-  <h2>Book this Chef:</h2>
-  <div class='booking-form'>
-    <%= simple_form_for [ @chef, @booking ] do |f| %>
-      <%= f.input :date, label: 'Date:' %>
-      <%= f.input :guests, label: 'Number of Guests:', collection: 2..50 %>
-      <%= f.input :location, label: 'Location:' %>
-      <%= f.input :duration, label: 'Duration (Hours):', collection: 3..12 %>
-      <%= f.input :cuisine, label: 'Preferred Cuisine:' %>
-      <%= f.submit 'Confirm Booking' %>
+<div class="chef-profile-page-container">
+  <div class='chef-info ml-3'>
+    <% if @chef.photo.attached? %>
+      <%= cl_image_tag @chef.photo.key, width: 360, class: 'cloudinary-img' %>
     <% end %>
+
+    <h2 id="chef-name"><%= @chef.name %></h2>
+    <h3 id="experience"><%= @chef.years_experience %> Years Experience</h3>
+    <div class='chef-deets'>
+      <p><strong>Bio:</strong> <%= @chef.bio %></p>
+      <p><strong>Hourly Rate:</strong> £<%= @chef.hourly_rate.to_i %></p>
+      <p><strong>Location:</strong> <%= @chef.location %></p>
+      <p><strong>Cuisine(s):</strong> <%= @chef.cuisines %></p>
+    </div>
+
+    <%= link_to "Update", edit_chef_path(@chef), class: 'btn btn-info mb-2' %>
+    <%= link_to chef_path(@chef),
+                method: :delete,
+                data: { confirm: "Are you sure you want to delete?" }, class: 'btn btn-danger mb-2' do %>
+                Delete <i class="far fa-trash-alt"></i>
+                <% end %>
+  <br>
+    <%= link_to "Return to 'Browse Chefs'", chefs_path, class: 'btn btn-info mb-3'  %>
+  </div>
+
+  <div class="booking-form-container m-3">
+    <h2 class="book-chef">Book this Chef:</h2>
+    <div class='booking-form'>
+      <%= simple_form_for [ @chef, @booking ] do |f| %>
+        <%= f.input :date, label: 'Date:', as: :date %>
+        <%= f.input :guests, label: 'Number of Guests:', collection: 2..50 %>
+        <%= f.input :location, label: 'Location:' %>
+        <%= f.input :duration, label: 'Duration (Hours):', collection: 3..12 %>
+        <%= f.input :cuisine, label: 'Preferred Cuisine:' %>
+        <%= f.submit 'Confirm Booking', class: 'btn btn-info' %>
+      <% end %>
+    </div>
   </div>
 </div>

@@ -2,3 +2,61 @@
 @import "home";
 @import "profile";
 @import "show";
+
+.browse-chefs {
+  font-family: 'pacifico', cursive;
+  font-size: 56px;
+}
+
+.chef-profile {
+  font-family: 'arvo', serif;
+  box-shadow: 0 0 8px;
+  padding: 16px;
+  text-align: center;
+  transition: 0.3s;
+  width: 28%;
+  margin: 0px 24px 24px 24px;
+
+    .chef-name {
+    font-size: 32px;
+    color: #051a23;
+    font-family: 'pacifico', cursive;
+
+    .chef-name:hover {
+      text-decoration: none;
+    }
+  }
+
+  .chef-details {
+    font-size: 14px;
+
+    p {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.chef-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.chef-profile:hover {
+  transform: scale(1.1)
+}
+
+.btn-info {
+  background-color: #051a23;
+  color: white;
+  border: #051a23;
+  box-shadow: 0 0 8px;
+  margin-top: 0px;
+  border-radius: 5px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
