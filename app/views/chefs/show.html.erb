@@ -1,6 +1,6 @@
 <div class='chef-info ml-3'>
   <% if @chef.photo.attached? %>
-    <%= cl_image_tag @chef.photo.key, width: 360 %>
+    <%= cl_image_tag @chef.photo.key, width: 360, class: 'cloudinary-img' %>
   <% end %>
 
   <h2 id="chef-name"><%= @chef.name %></h2>
@@ -15,7 +15,6 @@
 
 <div class='buttons ml-3'>
   <%= link_to "Update", edit_chef_path(@chef), class: 'btn btn-info mb-2' %>
-  <br>
   <%= link_to chef_path(@chef),
               method: :delete,
               data: { confirm: "Are you sure you want to delete?" }, class: 'btn btn-danger mb-2' do %>
@@ -25,7 +24,7 @@
   <%= link_to "Return to 'Browse Chefs'", chefs_path, class: 'btn btn-info'  %>
 </div>
 <div class="booking-form-container m-3">
-  <h2>Book this Chef:</h2>
+  <h2 class="book-chef">Book this Chef:</h2>
   <div class='booking-form'>
     <%= simple_form_for [ @chef, @booking ] do |f| %>
       <%= f.input :date, label: 'Date:' %>
@@ -33,7 +32,7 @@
       <%= f.input :location, label: 'Location:' %>
       <%= f.input :duration, label: 'Duration (Hours):', collection: 3..12 %>
       <%= f.input :cuisine, label: 'Preferred Cuisine:' %>
-      <%= f.submit 'Confirm Booking' %>
+      <%= f.submit 'Confirm Booking', class: 'btn btn-info' %>
     <% end %>
   </div>
 </div>
