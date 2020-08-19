@@ -28,10 +28,24 @@
   }
 }
 
+.chef-info {
+  // width: 40%;
+}
+
 .cloudinary-img {
   margin-top: 16px;
 }
 
 .book-chef {
   font-family: 'pacifico', cursive;
+}
+
+.booking-form-container {
+  width: 30%;
+}
+
+.chef-profile-page-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }

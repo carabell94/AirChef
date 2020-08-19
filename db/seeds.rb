@@ -10,7 +10,7 @@ user1 = User.create!(email: "user1@user1.com", password: "123456")
 
 user2 = User.create!(email: "user2@user2.com", password: "123456")
 
-julio = Chef.create!(name: "Julio",  bio: "Julio's cooking is as great as his moustache.", years_experience: 10, hourly_rate: 10, location: "Madrid", cuisines: "Spanish" )
+julio = Chef.create!(name: "Julio",  bio: "Julio's cooking is as great as his moustache. He is a whizz in the kitchen, specialising in Spanish-themed feasts.", years_experience: 10, hourly_rate: 10, location: "Madrid", cuisines: "Spanish" )
 
 toni = Chef.create!(name: "Toni", bio: 'Bubbly Toni is a whizz in the kitchen.',  years_experience: 12, hourly_rate: 20, location: "Berlin", cuisines:"German")
 
