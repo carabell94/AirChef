@@ -4,11 +4,12 @@
   <h1>My Profile</h1>
 </div>
 <div class="profile">
-  <p>Email Address: <%= @user.email %></p>
+<%= image_tag "avatar-chef.23.png", width: 150 %>
+  <p id="email"><strong>Email Address:</strong> <%= @user.email %></p>
 </div>
 
 <div>
-  <h2>My Bookings</h2>
+  <h1 class="bookings-header">My Bookings</h1>
 <div class="bookings">
 <% @bookings.each do |booking| %>
 
