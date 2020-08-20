@@ -55,7 +55,7 @@
         </div>
       </div>
       <%= f.input :location, input_html: { autocomplete: 'email' }, label: 'Location:' %>
-      <%= f.input :cuisine, label: 'Preferred Cuisine:', :collection => ['Italian', 'French', 'German', 'Irish', 'British', 'Bulgarian', 'Greek', 'Spanish', 'American', 'Turkish', 'Japanese', 'Modern', 'Traditional', 'Chinese'] %>
+      <%= f.input :cuisine, label: 'Preferred Cuisine:', collection: @chef.cuisines.split(',') %>
       <%= f.submit 'Confirm Booking', class: 'btn btn-info' %>
       <% end %>
     </div>
