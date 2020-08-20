@@ -1,6 +1,10 @@
 class ChefsController < ApplicationController
   def index
-    @chefs = Chef.all
+    if params[:query1].present?
+      @chefs = Chef.search_by_location(params[:query1])
+    else
+      @chefs = Chef.all
+    end
   end
 
   def show

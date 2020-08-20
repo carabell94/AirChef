@@ -3,16 +3,23 @@
     <%= image_tag "https://res.cloudinary.com/dzjxqunz7/image/upload/v1597678290/airchef-logo_nwhdmx.png", class: 'airchef-logo' %>
     <% end %>
 
-    <div class="topnav">
-      <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Location" name="search">
-          <input type="text" placeholder="Cuisine" name="search">
-          <input type="text" placeholder="Price" name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
+<div class="topnav">
+  <div class="search-container">
+    <div class="row justify-content-center">
+      <div>
+        <%=  form_tag chefs_path, method: :get do %>
+        <%= text_field_tag :query1,
+        params[:query1],
+        placeholder: "      Location        Cuisine        "
+         %>
+        <%= button_tag(type: "submit", class: "submit") do %>
+          <i class="fas fa-search"></i>
+        <%  end %>
+        <%  end %>
       </div>
     </div>
+  </div>
+</div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
