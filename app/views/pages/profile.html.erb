@@ -6,6 +6,7 @@
 <div class="profile">
 <%= image_tag "avatar-chef.23.png", width: 150, class: "avatars" %>
   <p id="email"><strong>Email Address:</strong> <%= @user.email %></p>
+  <p><strong>Total Bookings: </strong><%= @bookings.count %></p>
 </div>
 
   <div>
@@ -13,13 +14,14 @@
     <div class="bookings">
       <% @bookings.each do |booking| %>
       <div class="booking">
-        <p><strong>Name of Chef:</strong> <%= booking.chef.name %></p>
+        <p><strong>Chef Name:</strong> <%= link_to booking.chef.name, chef_path(booking.chef), class: 'no-decoration' %></p>
         <p><strong>Date:</strong> <%= booking.date.strftime("%d %B %Y") %></p>
         <p><strong>Cuisine:</strong> <%= booking.cuisine %></p>
         <p><strong>Location:</strong> <%= booking.location.capitalize %></p>
         <p><strong>Number of Guests:</strong> <%= booking.guests %></p>
         <% if booking.date < Time.now && booking.reviews.empty? %>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%= booking.id %>">
+          <p><strong>---------------------------------------</strong></p>
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal<%= booking.id %>">
             Leave Review ⭐️
           </button>
           <!-- Button trigger modal -->
@@ -46,11 +48,14 @@
               </div>
             </div>
           </div>
+        <% elsif booking.date < Time.now %>
+          <p><strong>---------------------------------------</strong></p>
+          <p id="review-submitted"><em>Review submitted!</em><%= link_to 'Book Again?', chef_path(booking.chef), class: 'btn btn-info book-again' %></p>
         <% end %>
       </div>
       <% end %>
     </div>
-    <%= link_to "Return to 'Browse Chefs'", chefs_path, class: 'btn btn-info mb-3'  %>
+    <%= link_to "Return to Browse Chefs", chefs_path, class: 'btn btn-info2 mb-3'  %>
 
   </div>
 </div>
