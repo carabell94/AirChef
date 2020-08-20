@@ -10,13 +10,13 @@ user1 = User.create!(email: "user1@user1.com", password: "123456")
 
 user2 = User.create!(email: "user2@user2.com", password: "123456")
 
-julio = Chef.create!(name: "Julio",  bio: "Julio's cooking is as great as his moustache.", years_experience: 10, hourly_rate: 10, location: "Madrid", cuisines: "Spanish" )
+julio = Chef.create!(name: "Julio",  bio: "Julio's cooking is as great as his moustache. He is a whizz in the kitchen, specialising in Spanish-themed feasts.", years_experience: 10, hourly_rate: 10, location: "Madrid", cuisines: "Spanish" )
 
 toni = Chef.create!(name: "Toni", bio: 'Bubbly Toni is a whizz in the kitchen.',  years_experience: 12, hourly_rate: 20, location: "Berlin", cuisines:"German")
 
 arthur = Chef.create!(name: "Arthur",  bio: "Don't let his calm exterior fool you, Arthur has been whipping up French delicacies since he was old enough to reach the counter-top. ", years_experience: 15, hourly_rate: 25, location: "London", cuisines:"French")
 
-piotr = Chef.create!(name: "Piotr", bio: 'Trust Piotr for delicious Polish cuisine.',  years_experience: 15, hourly_rate: 25, location: "Krakov", cuisines:"Polish")
+piotr = Chef.create!(name: "Piotr", bio: 'Trust Piotr for delicious Polish cuisine.',  years_experience: 15, hourly_rate: 25, location: "Krakow", cuisines:"Polish")
 
 rahul = Chef.create!(name: "Rahul",  bio: 'Rahul is the definition of service with a smile.', years_experience: 17, hourly_rate: 30, location: "London", cuisines: "Indian, British")
 
@@ -29,6 +29,8 @@ alex = Chef.create!(name: "Alex",  bio: 'Sample Bio for Chef Goes Here', years_e
 rebecca = Chef.create!(name: "Rebecca", bio: 'Sample Bio for Chef Goes Here',  years_experience: 20, hourly_rate: 40, location: "Rome", cuisines:"French, Italian")
 
 leonard = Chef.create!(name: "Leonard", bio: 'Sample Bio for Chef Goes Here',  years_experience:20, hourly_rate: 100, location: "Los Angeles", cuisines: "French, Italian, Mexican")
+
+jakob = Chef.create!(name: "Jakob", bio: 'Sample Bio for Chef Goes Here',  years_experience:20, hourly_rate: 100, location: "Ibiza", cuisines: "French, Italian, Mexican")
 
 lu = Chef.create!(name: "Lu",  bio: 'Sample Bio for Chef Goes Here', years_experience: 10, hourly_rate: 35, location: "Paris", cuisines:"French, Italian")
 

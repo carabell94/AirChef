@@ -37,12 +37,12 @@ class ChefsController < ApplicationController
   def destroy
     @chef = Chef.find(params[:id])
     @chef.destroy
-    redirect_to root_path
+    redirect_to chefs_path
   end
 
   private
 
   def strong_params
-    params.require(:chef).permit(:name, :years_experience, :hourly_rate, :location, :cuisines, :photo)
+    params.require(:chef).permit(:name, :years_experience, :hourly_rate, :location, :cuisines, :bio, :photo)
   end
 end

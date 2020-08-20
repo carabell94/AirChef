@@ -1,7 +1,18 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon nav">
   <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "https://res.cloudinary.com/dzjxqunz7/image/upload/v1597678290/airchef-logo_nwhdmx.png", class: 'airchef-logo' %>
     <% end %>
+
+    <div class="topnav">
+      <div class="search-container">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Location" name="search">
+          <input type="text" placeholder="Cuisine" name="search">
+          <input type="text" placeholder="Price" name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -12,11 +23,10 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= image_tag "avatar.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu dropdown-menu-right drops" aria-labelledby="navbarDropdown">
             <%= link_to "Messages", "#", class: "dropdown-item" %>
-            <%= link_to "My Bookings", chef_booking_path, class: "dropdown-item" %>
-            <%= link_to "Profile", "#", class: "dropdown-item" %>
+            <%= link_to "Profile", profile_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
@@ -28,3 +38,4 @@
     </ul>
   </div>
 </div>
+<a href="#" class="back-home"><i class="fas fa-arrow-circle-up"></i></a>

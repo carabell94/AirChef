@@ -1,0 +1,39 @@
+
+
+.booking {
+  border: 1px solid grey;
+  padding: 2em;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.bookings {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-bottom: 30px;
+}
+
+.profile {
+  border: 1px solid grey;
+  border-radius: 20px;
+  padding: 2em;
+  width: 40%;
+  margin-bottom: 30px;
+}
+
+.profile-container {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+}
+
+p {
+  font-family: 'arvo', serif;
+}
+
+#email {
+  padding-top: 16px;
+}

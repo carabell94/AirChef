@@ -4,6 +4,8 @@ class PagesController < ApplicationController
   def home
   end
 
-  def my_profile
+  def profile
+    @user = current_user
+    @bookings = @user.bookings
   end
 end

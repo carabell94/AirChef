@@ -1,0 +1,62 @@
+.booking-form {
+  #booking_date_4i {
+  // display: none;
+  font-size: 100px!important;
+  }
+}
+#booking_date_5i {
+display: none;
+}
+
+#chef-name {
+  font-family: 'pacifico', cursive;
+  font-size: 48px;
+  padding-top: 16px
+}
+
+#experience {
+  font-family: 'arvo', serif;
+  font-size: 16px;
+}
+
+.chef-deets {
+  font-family: 'arvo', serif;
+  padding-top: 16px;
+  // margin: 0px;
+}
+
+.btn-danger {
+  background-color: #051a23;
+  color: white;
+  border: #051a23;
+  box-shadow: 0 0 8px;
+  margin-top: 0px;
+  border-radius: 5px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.chef-info {
+  width: 25%;
+}
+
+.cloudinary-img {
+  margin-top: 16px;
+}
+
+.book-chef {
+  font-family: 'pacifico', cursive;
+  font-size: 32px;
+}
+
+.booking-form-container {
+  width: 30%;
+}
+
+.chef-profile-page-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
