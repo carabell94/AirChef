@@ -5,7 +5,7 @@
   <%= f.input :years_experience, label: 'Number of Years Experience', collection: 1..50 %>
   <%= f.input :hourly_rate, label: 'Hourly Rate (£)' %>
   <%= f.input :cuisines %>
-  <%= f.input :photo, as: :file %>
+  <%= f.input :photo, as: :file, label: 'Profile Picture' %>
 
   <%= f.submit 'Update', class: "btn btn-info mb-3" %>
 <% end %>
