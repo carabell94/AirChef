@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
   # end
 
   def show
-    @bookings = Booking.find(params[:chef_id, :id])
+    @bookings = Booking.find(params[:id])
   end
 
   def new
