@@ -21,8 +21,8 @@
         <% if booking.date < Time.now && booking.review_rating.nil? %>
           <%= link_to 'Leave Review', edit_booking_path(booking) %>
         <% elsif booking.review_rating %>
-          <p><%= booking.review_rating %></p>
-          <p><%= booking.review_content %></p>
+          <p>Rating: ⭐️ <%= booking.review_rating %></p>
+          <p>My Review: <%= booking.review_content %></p>
 
         <% end %>
       </div>
