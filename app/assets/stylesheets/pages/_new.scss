@@ -13,19 +13,7 @@
   padding-left: 140px;
 }
 
-.btn-danger2 {
-  background-color: #f4f4f4;
-  color: #051a23;
-  border: #051a23;
-  box-shadow: 0 0 8px;
-  margin-top: 0px;
-  border-radius: 5px;
+.btn-smaller {
   width: 56px;
   font-size: 14px;
-
-  &:hover {
-    transform: scale(1.1);
-    background-color: red;
-    color: white;
-  }
 }

@@ -5,13 +5,19 @@
       <% @chefs.each do |chef| %>
       <div class="chef-profile">
         <% if chef.photo.attached? %>
-          <%= cl_image_tag chef.photo.key, width: 250 %>
+          <%= cl_image_tag chef.photo.key, width: 250, height: 250 %>
         <% end %>
           <%= link_to chef.name, chef_path(chef), class: 'd-block chef-name'%>
           <div class='chef-details'>
             <p><strong>Location:</strong> <%= chef.location.split(",").first%></p>
             <p><strong>Hourly Rate:</strong> £<%= chef.hourly_rate.to_i %></p>
-            <p><strong>Rating:</strong> <%= chef.average_review %> <%= '⭐️' unless chef.average_review == "" %></p>
+            <p><strong>Rating:</strong>
+              <% if chef.average_review == "" %>
+                <span id="no-reviews"><em>No reviews yet</em></span>
+              <% else %>
+                <%= chef.average_review %> <%= '⭐️' %>
+              <% end %>
+              </p>
           </div>
       </div>
     <% end %>
