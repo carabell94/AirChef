@@ -83,3 +83,20 @@ color: white;
     color: rgb(255,192,7);
   }
 }
+
+.log-in {
+  color: white!important;
+  padding: 6px 18px!important;
+  margin-right: 0;
+  &:hover {
+    box-shadow: 1px 1px -1px -1px 10px;
+    color: black!important;
+  }
+}
+.navbar {
+  padding: 0!important;
+}
+
+.avatar {
+width: 45px;
+}
