@@ -21,19 +21,32 @@
                 <% end %>
   <br>
     <%= link_to "Return to 'Browse Chefs'", chefs_path, class: 'btn btn-info mb-3'  %>
+    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#addDishPictures">
+    Add some pictures
+    </button>
+  </div>
+
+  <div>
+    <h2 class="book-chef">Dish Pictures:</h2>
+    <div class="dishes">
+      <% @chef.dish_photos.each do |photo| %>
+        <%= cl_image_tag photo.key, class: 'cloudinary-img card-dish' %>
+      <% end %>
+    </div>
+    <a data-toggle="modal" data-target="#addDishPictures"> Add some pictures </a>
   </div>
 
   <div class="booking-form-container m-3">
     <h2 class="book-chef">Book this Chef:</h2>
     <div class='booking-form'>
-      <%= simple_form_for [ @chef, @booking ] do |f| %>
-        <%= f.input :date, label: 'Date:', as: :date, html5: true %>
-        <%= f.input :guests, label: 'Number of Guests:', collection: 2..50 %>
-        <%= f.input :location, label: 'Location:' %>
-        <%= f.input :duration, label: 'Duration (Hours):', collection: 3..12 %>
-        <%= f.input :cuisine, label: 'Preferred Cuisine:' %>
-        <%= f.submit 'Confirm Booking', class: 'btn btn-info' %>
-      <% end %>
+      <%= render 'booking_form', chef: @chef %>
     </div>
   </div>
+
 </div>
+
+<%= render 'modal_add_pictures' %>
+
+
+
+

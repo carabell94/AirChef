@@ -6,5 +6,6 @@ class Chef < ApplicationRecord
   validates :bio, length: { minimum: 10 }
 
   has_one_attached :photo
+  has_many_attached :dish_photos
 
 end
