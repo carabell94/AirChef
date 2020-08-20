@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 #home-banner{
   text-align: center;
-  background-image: url("https://res.cloudinary.com/dzjxqunz7/image/upload/v1597679610/chef_gplqgs.jpg");
+  background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://res.cloudinary.com/dzjxqunz7/image/upload/v1597679610/chef_gplqgs.jpg");
   background-size: cover;
   background-position: center;
   padding-top: 30px;
@@ -10,16 +10,55 @@
   font-family: 'roboto';
 
   h1 {
-    margin-bottom: 20px;
+  animation: text 4s 1;
+  margin: 20px;
+  font-size: 50px;
   }
+
+  @keyframes text {
+  0% {
+    opacity: 0.2;
+  }
+  10% {
+    opacity: 0.25;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  50% {
+    letter-spacing: 0;
+  }
+  60% {
+    opacity: 0.6;
+  }
+
+  70% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 1;
+  }
+}
 
   p {
     font-size: 20px;
+    color: rgb(230, 230, 230);
   }
 
   .btn-light {
     border-radius: 5px;
     margin-top: 5px;
+    padding: 10px;
+    font-size: 20px;
   }
 
   #private-chef {
@@ -29,4 +68,8 @@
 
 .min-height {
   min-height: calc(100vh - 210px);
+}
+
+.inner-banner {
+  margin-top: 50px;
 }
