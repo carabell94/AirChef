@@ -1,5 +1,6 @@
-<div class="text-center">
-  <h1 class="browse-chefs mt-3">Browse Chefs</h1>
+<div class="main-container text-center">
+  <div class="cards-container">
+    <h1 class="browse-chefs mt-3">Browse Chefs</h1>
     <div class="chef-container">
       <% @chefs.each do |chef| %>
       <div class="chef-profile">
@@ -8,13 +9,19 @@
         <% end %>
           <%= link_to chef.name, chef_path(chef), class: 'd-block chef-name'%>
           <div class='chef-details'>
-            <p>Location: <%= chef.location%></p>
+            <p>Location: <%= chef.location.split(",").first%></p>
             <p>Hourly Rate: £<%= chef.hourly_rate.to_i %></p>
             <p><%= chef.average_review %> <%= '⭐️' unless chef.average_review == "" %></p>
           </div>
       </div>
     <% end %>
     </div>
+  </div>
 
-  <%= link_to 'Add Chef', new_chef_path, class: 'btn btn-info mb-4 private' %>
+    <div id="map"
+        style= "height: 100vh"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+
 </div>

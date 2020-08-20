@@ -1,3 +1,5 @@
+@import "show-multiple-pictures";
+
 .booking-form {
   #booking_date_4i {
   // display: none;
@@ -22,7 +24,6 @@ display: none;
 .chef-deets {
   font-family: 'arvo', serif;
   padding-top: 16px;
-  // margin: 0px;
 }
 
 .btn-danger {
@@ -44,6 +45,7 @@ display: none;
 
 .cloudinary-img {
   margin-top: 16px;
+  border-radius: 20px;
 }
 
 .book-chef {
@@ -59,4 +61,8 @@ display: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.chef-profile {
+border-radius: 20px;
 }

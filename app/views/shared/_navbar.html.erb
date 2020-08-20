@@ -3,36 +3,42 @@
     <%= image_tag "https://res.cloudinary.com/dzjxqunz7/image/upload/v1597678290/airchef-logo_nwhdmx.png", class: 'airchef-logo' %>
     <% end %>
 
-    <div class="topnav">
-      <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Location" name="search">
-          <input type="text" placeholder="Cuisine" name="search">
-          <input type="text" placeholder="Price" name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
+<div class="topnav">
+  <div class="search-container">
+    <div class="row justify-content-center">
+      <div>
+        <%=  form_tag chefs_path, method: :get do %>
+        <%= text_field_tag :query1,
+        params[:query1],
+        placeholder: "Search by location or cuisine"
+         %>
+        <%= button_tag(type: "submit", class: "submit") do %>
+          <i class="fas fa-search"></i>
+        <%  end %>
+        <%  end %>
       </div>
     </div>
+  </div>
+</div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <%= link_to 'Add Chef', new_chef_path, class: 'btn btn-info private' %>
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
-          <%= image_tag "avatar.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%= image_tag "avatar-chef.23.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right drops" aria-labelledby="navbarDropdown">
-            <%= link_to "Messages", "#", class: "dropdown-item" %>
             <%= link_to "Profile", profile_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <%= link_to "Login", new_user_session_path, class: "nav-link btn btn-info private log-in" %>
         </li>
       <% end %>
     </ul>

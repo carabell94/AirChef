@@ -41,7 +41,7 @@
   margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .chef-profile:hover {
@@ -62,6 +62,29 @@
 }
 
 .private {
-  font-size: 24px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.login {
+  color: red!important;
+}
+
+.main-container {
+  display: flex;
+}
+
+#map {
+  min-height: 100vh !important;
+  min-width: 35vw;
+  max-width: 35vw;
+  position: sticky;
+  top: 0;
+  margin-top: 16px;
+  margin-right: 16px;
+}
+
+.cards-container {
+  flex-grow: 1;
 }
 

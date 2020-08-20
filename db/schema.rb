@@ -59,6 +59,8 @@ ActiveRecord::Schema.define(version: 2020_08_20_133122) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "bio"
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "messages", force: :cascade do |t|
