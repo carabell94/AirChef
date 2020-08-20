@@ -10,7 +10,7 @@
         <%=  form_tag chefs_path, method: :get do %>
         <%= text_field_tag :query1,
         params[:query1],
-        placeholder: "      Location        Cuisine        "
+        placeholder: "Search by location or cuisine"
          %>
         <%= button_tag(type: "submit", class: "submit") do %>
           <i class="fas fa-search"></i>
