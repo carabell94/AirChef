@@ -9,12 +9,11 @@
         <% end %>
           <%= link_to chef.name, chef_path(chef), class: 'd-block chef-name'%>
           <div class='chef-details'>
-            <p>Location: <%= chef.location%></p>
+            <p>Location: <%= chef.location.split(",").first%></p>
             <p>Hourly Rate: £<%= chef.hourly_rate.to_i %></p>
           </div>
       </div>
     <% end %>
-    <%= link_to 'Add Chef', new_chef_path, class: 'btn btn-info mb-4 private' %>
     </div>
   </div>
 

@@ -2,6 +2,16 @@ class ChefsController < ApplicationController
   def index
     if params[:query1].present?
       @chefs = Chef.search_by_location(params[:query1])
+      @searched_chefs = @chefs.geocoded
+
+        @markers = @searched_chefs.map do |chef|
+          {
+            lat: chef.latitude,
+            lng: chef.longitude,
+            infoWindow: render_to_string(partial: "info_window", locals: { chef: chef }),
+            image_url: "https://res.cloudinary.com/dzjxqunz7/image/upload/v1597931839/knifefork_ywuj7u.png"
+          }
+        end
     else
       @chefs = Chef.geocoded
 

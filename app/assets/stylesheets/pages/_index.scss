@@ -41,7 +41,7 @@
   margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .chef-profile:hover {
@@ -76,7 +76,8 @@
 
 #map {
   min-height: 100vh !important;
-  width: 100%;
+  min-width: 35vw;
+  max-width: 35vw;
   position: sticky;
   top: 0;
   margin-top: 16px;
