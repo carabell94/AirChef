@@ -9,9 +9,9 @@
         <% end %>
           <%= link_to chef.name, chef_path(chef), class: 'd-block chef-name'%>
           <div class='chef-details'>
-            <p>Location: <%= chef.location.split(",").first%></p>
-            <p>Hourly Rate: £<%= chef.hourly_rate.to_i %></p>
-            <p><%= chef.average_review %> <%= '⭐️' unless chef.average_review == "" %></p>
+            <p><strong>Location:</strong> <%= chef.location.split(",").first%></p>
+            <p><strong>Hourly Rate:</strong> £<%= chef.hourly_rate.to_i %></p>
+            <p><strong>Rating:</strong> <%= chef.average_review %> <%= '⭐️' unless chef.average_review == "" %></p>
           </div>
       </div>
     <% end %>
