@@ -8,6 +8,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import 'mapbox-gl/dist/mapbox-gl';
+@import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
 
 // Your CSS partials
 @import "components/index";
@@ -19,3 +20,5 @@
 @import "pages/new";
 @import "pages/devise";
 @import "device/new";
+@import "components/map";
+
