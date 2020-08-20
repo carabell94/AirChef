@@ -24,7 +24,7 @@
   </div>
 
   <div class="mt-3">
-    <h2 class="book-chef">Dish Pictures:</h2>
+    <h2 class="book-chef">More Pictures:</h2>
     <div class="dishes">
       <% @chef.dish_photos.each do |photo| %>
         <%= cl_image_tag photo.key, class: 'cloudinary-img card-dish' %>
