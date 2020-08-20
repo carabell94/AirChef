@@ -6,9 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user1 = User.create!(email: "user1@user1.com", password: "123456")
+require 'faker'
 
-user2 = User.create!(email: "user2@user2.com", password: "123456")
+cuisines = %w(mexican italian indian cajun soul thai greek chinese lebanese japanese american moroccan mediterranean french spanish german korean vietnamese turkish caribbean)
+london_areas = ['Isle of Dogs', 'Belgravia', 'Blackheath', 'East Finchley', 'Nothing Hill', 'Fulham', 'Richmond', 'Kensington', 'Chelsea', 'Streatham', 'Hammersmith', 'Herne Hill', 'Hampstead', 'Islington', 'Clapham', 'Wandsworth', 'Bethnal Green', 'Crystal Palace', 'Camden', 'Hackney', 'Bermondsey', 'Brixton', 'Peckham', 'Leyton']
 
 cara_user = User.create!(email: "cara@gmail.com", password: "123456")
 
@@ -17,6 +18,14 @@ lu_user = User.create!(email: "lu@gmail.com", password: "123456")
 shaun_user = User.create!(email: "shaun@gmail.com", password: "123456")
 
 fernando_user = User.create!(email: "fernando@gmail.com", password: "123456")
+
+10.times do
+  user = User.create(
+    email: Faker::Internet.email,
+    password: '123456'
+  )
+  user.save!
+end
 
 julio = Chef.create!(name: "Julio",  bio: "Julio's cooking is as great as his moustache. He is a whizz in the kitchen, specialising in Spanish-themed feasts.", years_experience: 10, hourly_rate: 10, location: "Mayfair, London", cuisines: "Spanish, Mexican, European" )
 
@@ -48,9 +57,63 @@ fernando = Chef.create!(name: "Fernando",  bio: 'Unbelievably skilled in the kit
 
 shaun = Chef.create!(name: "Shaun",  bio: 'Unbelievably skilled in the kitchen.', years_experience: 9, hourly_rate: 22, location: "Clerkenwell, London", cuisines: "British, Seafood, Chinese")
 
-private_dinner = Booking.create!(user: user1, date:Time.now, duration: 5, guests: 2, location:"Madrid", cuisine: "Spanish", chef: julio)
+20.times do
+  chef = Chef.create(
+    name: Faker::Name.first_name,
+    bio: Faker::Lorem.words(number: rand(4..30)).join(' '),
+    years_experience: rand(1..30),
+    hourly_rate: rand(10..100),
+    location: "#{london_areas.sample}, London",
+    cuisines: cuisines.sample(rand(1..6)).join(', ')
+    )
+  p chef.cuisines
+  chef.save!
+end
 
-kids_party = Booking.create!(user: user2, date:Time.now, duration: 5, guests: 30, location:"London", cuisine: "French", chef: arthur)
+50.times do
+  booking = Booking.create(
+    user: User.find_by_id(rand(1..14)),
+    date: Faker::Date.between(from: '2020-08-01', to: '2020-08-19'),
+    duration: rand(5..10),
+    guests: rand(2..50),
+    location: london_areas.sample,
+    chef: Chef.find_by_id(rand(1..35)),
+    cuisine: cuisines.sample
+    )
+  booking.save!
+end
+
+count = 0
+
+# 50.times do
+#   review = Review.create(
+#     rating: rand(1..5),
+#     content: Faker::Lorem.words(number: rand(10..50)).join(' '),
+#     booking: count = count + 1
+#     )
+#   review.save!
+# end
+
+Booking.all.each do |book|
+  review = Review.create(
+    rating: rand(1..5),
+    content: Faker::Lorem.words(number: rand(10..50)).join(' '),
+    booking: Booking.find_by_id(book.id)
+  )
+  review.save!
+end
+
+# user1 = User.create!(email: "user1@user1.com", password: "123456")
+
+# user2 = User.create!(email: "user2@user2.com", password: "123456")
+
+
+
+
+
+# private_dinner = Booking.create!(user: User.find_by_id(rand(1..4)), date:Time.now, duration: 5, guests: 2, location:"Madrid", cuisine: "Spanish", chef: Chef.find_by_id(rand(1..10)))
+
+# kids_party = Booking.create!(user: user2, date:Time.now, duration: 5, guests: 30, location:"London", cuisine: "French", chef: arthur)
 
 
 
