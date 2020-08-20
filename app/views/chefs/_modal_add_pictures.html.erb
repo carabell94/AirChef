@@ -10,7 +10,7 @@
       </div>
       <div class="modal-body">
         <%= simple_form_for @chef do |f| %>
-          <%= f.input :dish_photos, as: :file, input_html: {multiple: true} %>
+          <%= f.input :dish_photos, as: :file, input_html: {multiple: true}, label: false %>
       </div>
       <div class="modal-footer">
         <%= f.submit 'Upload', class: "btn btn-info mb-3" %>
