@@ -1,0 +1,24 @@
+.container-device {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  height: 450px;
+  padding-top: 20px;
+  h2 {
+    font-family: 'pacifico', cursive;
+  }
+}
+.big-container {
+  text-align: center;
+  background-image: url("https://res.cloudinary.com/dzjxqunz7/image/upload/v1597679610/chef_gplqgs.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-top: 30px;
+  // color: white;
+  height: 100vh;
+}
+.outside {
+  width: 400px;
+  background-color: rgba(250, 250, 250, .5);
+  margin: 0 auto;
+}
