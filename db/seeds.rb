@@ -64,3 +64,4 @@ kids_party = Booking.create!(user: user2, date:Time.now, duration: 5, guests: 30
 
 
 
+
