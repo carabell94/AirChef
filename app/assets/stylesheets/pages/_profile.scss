@@ -4,7 +4,8 @@
   border: 1px solid grey;
   padding: 2em;
   border-radius: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 8px;
 }
 
 .avatars {
@@ -23,6 +24,7 @@
   padding: 2em;
   width: 40%;
   margin-bottom: 30px;
+  box-shadow: 0 0 8px;
 }
 
 .profile-container {
@@ -39,4 +41,22 @@ p {
 
 #email {
   padding-top: 16px;
+  margin-bottom: 0px;
+}
+
+.btn-info2 {
+  background-color: #f4f4f4;
+  color: #051a23;
+  border: #051a23;
+  box-shadow: 0 0 8px;
+  margin-top: 0px;
+  border-radius: 5px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+#review-submitted {
+
 }
