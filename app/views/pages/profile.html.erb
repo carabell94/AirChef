@@ -18,12 +18,34 @@
         <p><strong>Cuisine:</strong> <%= booking.cuisine %></p>
         <p><strong>Location:</strong> <%= booking.location.capitalize %></p>
         <p><strong>Number of Guests:</strong> <%= booking.guests %></p>
-        <% if booking.date < Time.now && booking.review_rating.nil? %>
-          <%= link_to 'Leave Review ⭐️', edit_booking_path(booking), class: 'btn btn-primary' %>
-        <% elsif booking.review_rating %>
-          <p>My Review: "<%= booking.review_content %>"</p>
-          <p>Rating: ⭐️ <%= booking.review_rating %></p>
+        <% if booking.date < Time.now && booking.reviews.empty? %>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%= booking.id %>">
+            Leave Review ⭐️
+          </button>
+          <!-- Button trigger modal -->
 
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal<%= booking.id %>" tabindex="-1" aria-labelledby="exampleModalLabel<%= booking.id %>" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel<%= booking.id %> ">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <%= simple_form_for [booking, Review.new] do |f| %>
+                  <%= f.input :rating %>
+                  <%= f.input :content %>
+                </div>
+                <div class="modal-footer">
+                  <%= f.button :submit %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
         <% end %>
       </div>
       <% end %>
@@ -32,5 +54,4 @@
 
   </div>
 </div>
-
 

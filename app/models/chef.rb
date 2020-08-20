@@ -1,5 +1,7 @@
 class Chef < ApplicationRecord
   has_many :bookings
+  has_many :reviews, through: :bookings
+
 
   validates :name, :bio, :location, :years_experience, :hourly_rate, :cuisines, presence: true
   validates :years_experience, numericality: { only_integer: true, greater_than_or_equal_to: 1, less_than_or_equal_to: 70}
@@ -7,4 +9,7 @@ class Chef < ApplicationRecord
 
   has_one_attached :photo
 
+  def average_review
+    reviews.pluck(:rating).sum / chef_reviews.length.f
+  end
 end
