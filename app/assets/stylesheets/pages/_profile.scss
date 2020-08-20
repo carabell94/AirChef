@@ -60,3 +60,11 @@ p {
 #review-submitted {
 
 }
+
+.no-decoration {
+  color: #051a23;
+
+  &:hover {
+      color: #051a23;
+    }
+}

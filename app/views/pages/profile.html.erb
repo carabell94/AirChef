@@ -14,7 +14,7 @@
     <div class="bookings">
       <% @bookings.each do |booking| %>
       <div class="booking">
-        <p><strong>Name of Chef:</strong> <%= booking.chef.name %></p>
+        <p><strong>Chef Name:</strong> <%= link_to booking.chef.name, chef_path(booking.chef), class: 'no-decoration' %></p>
         <p><strong>Date:</strong> <%= booking.date.strftime("%d %B %Y") %></p>
         <p><strong>Cuisine:</strong> <%= booking.cuisine %></p>
         <p><strong>Location:</strong> <%= booking.location.capitalize %></p>
