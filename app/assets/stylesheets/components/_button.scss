@@ -1,0 +1,75 @@
+// Navy button with orangey hover effect
+.btn-info {
+  background-color: #051a23;
+  color: white;
+  border: #051a23;
+  box-shadow: 0 0 8px;
+  margin-top: 0px;
+  border-radius: 5px;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+}
+
+// White button with orangey hover effect
+.btn-info2 {
+  background-color: #f4f4f4;
+  color: #051a23;
+  border: #051a23;
+  box-shadow: 0 0 8px;
+  margin-top: 0px;
+  border-radius: 5px;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: #ffbe2d;
+    color: #051a23;
+    transition: 0.3s;
+  }
+}
+
+// Navy button with red hover effect
+.btn-danger {
+  background-color: #051a23;
+  color: white;
+  border: #051a23;
+  box-shadow: 0 0 8px;
+  margin-top: 0px;
+  border-radius: 5px;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+}
+
+// White button with red hover effect
+.btn-danger2 {
+  background-color: #f4f4f4;
+  color: #051a23;
+  border: #051a23;
+  box-shadow: 0 0 8px;
+  margin-top: 0px;
+  border-radius: 5px;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: red;
+    color: white;
+    transition: 0.3s;
+  }
+}
+
+// 'Discover Chefs' Button on Homepage
+.btn-light {
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 20px;
+
+    &:hover {
+      transition: 0.3s;
+    }
+  }
