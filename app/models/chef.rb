@@ -1,5 +1,7 @@
 class Chef < ApplicationRecord
   has_many :bookings
+  has_many :reviews, through: :bookings
+
 
 include PgSearch::Model
     pg_search_scope :search_by_location,
@@ -19,4 +21,11 @@ include PgSearch::Model
   after_validation :geocode, if: :will_save_change_to_location?
 
 
+  def average_review
+    if self.reviews.empty?
+      ""
+    else
+      self.reviews.pluck(:rating).sum / self.reviews.length.to_f
+    end
+  end
 end
