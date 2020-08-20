@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'profile', to: 'pages#profile'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :chefs do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:new, :create, :show]
     resources :messages, only: [:new, :create, :show]
   end
   resources :bookings, only: [:destroy, :edit, :update]
