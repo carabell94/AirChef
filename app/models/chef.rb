@@ -13,6 +13,10 @@ include PgSearch::Model
   validates :bio, length: { minimum: 10 }
 
   has_one_attached :photo
+  has_many_attached :dish_photos
+
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 
 
 end

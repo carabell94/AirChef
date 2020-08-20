@@ -3,9 +3,9 @@ class BookingsController < ApplicationController
   #   @bookings = Booking.all
   # end
 
-  # def show
-  #   @booking = Booking.find(params[:id])
-  # end
+  def show
+    @bookings = Booking.find(params[:id])
+  end
 
   def new
     @booking = Booking.new
@@ -23,18 +23,18 @@ class BookingsController < ApplicationController
     end
   end
 
-  # def edit
-  #   @booking = Booking.find(params[:id])
-  # end
+  def edit
+    @booking = Booking.find(params[:id])
+  end
 
-  # def update
-  #   @booking = Booking.find(params[:id])
-  #   if @booking.update(strong_params)
-  #     redirect_to booking_path(@booking)
-  #   else
-  #     render :update
-  #   end
-  # end
+  def update
+    @booking = Booking.find(params[:id])
+    if @booking.update(strong_params)
+      redirect_to profile_path
+    else
+      render :edit
+    end
+  end
 
   def destroy
     @booking = Booking.find(params[:id])
