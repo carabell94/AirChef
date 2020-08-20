@@ -11,7 +11,13 @@
           <div class='chef-details'>
             <p><strong>Location:</strong> <%= chef.location.split(",").first%></p>
             <p><strong>Hourly Rate:</strong> £<%= chef.hourly_rate.to_i %></p>
-            <p><strong>Rating:</strong> <%= chef.average_review %> <%= '⭐️' unless chef.average_review == "" %></p>
+            <p><strong>Rating:</strong>
+              <% if chef.average_review == "" %>
+                <span id="no-reviews"><em>No reviews yet</em></span>
+              <% else %>
+                <%= chef.average_review %> <%= '⭐️' %>
+              <% end %>
+              </p>
           </div>
       </div>
     <% end %>
