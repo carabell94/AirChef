@@ -10,6 +10,10 @@ class Chef < ApplicationRecord
   has_one_attached :photo
 
   def average_review
-    reviews.pluck(:rating).sum / chef_reviews.length.f
+    if self.reviews.empty?
+      ""
+    else
+      self.reviews.pluck(:rating).sum / self.reviews.length.to_f
+    end
   end
 end

@@ -6,6 +6,7 @@ class ChefsController < ApplicationController
   def show
     @chef = Chef.find(params[:id])
     @booking = Booking.new
+    @average = @chef.average_review
   end
 
   def new
