@@ -4,7 +4,7 @@ class ChefsController < ApplicationController
       @chefs = Chef.search_by_location(params[:query1])
     else
       @chefs = Chef.geocoded
-      
+
         @markers = @chefs.map do |chef|
           {
             lat: chef.latitude,
@@ -12,6 +12,7 @@ class ChefsController < ApplicationController
             infoWindow: render_to_string(partial: "info_window", locals: { chef: chef }),
             image_url: "https://res.cloudinary.com/dzjxqunz7/image/upload/v1597931839/knifefork_ywuj7u.png"
           }
+        end
     end
   end
 
