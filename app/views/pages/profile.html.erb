@@ -20,6 +20,7 @@
         <p><strong>Location:</strong> <%= booking.location.capitalize %></p>
         <p><strong>Number of Guests:</strong> <%= booking.guests %></p>
         <% if booking.date < Time.now && booking.reviews.empty? %>
+          <p><strong>---------------------------------------</strong></p>
           <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal<%= booking.id %>">
             Leave Review ⭐️
           </button>
@@ -49,7 +50,7 @@
           </div>
         <% elsif booking.date < Time.now %>
           <p><strong>---------------------------------------</strong></p>
-          <p id="review-submitted"><em>Review submitted!</em></p>
+          <p id="review-submitted"><em>Review submitted!</em><%= link_to 'Book Again?', chef_path(booking.chef), class: 'btn btn-info book-again' %></p>
         <% end %>
       </div>
       <% end %>
