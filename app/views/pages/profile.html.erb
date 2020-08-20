@@ -18,6 +18,13 @@
         <p><strong>Cuisine:</strong> <%= booking.cuisine %></p>
         <p><strong>Location:</strong> <%= booking.location.capitalize %></p>
         <p><strong>Number of Guests:</strong> <%= booking.guests %></p>
+        <% if booking.date < Time.now && booking.review_rating.nil? %>
+          <%= link_to 'Leave Review', edit_booking_path(booking) %>
+        <% elsif booking.review_rating %>
+          <p>Rating: ⭐️ <%= booking.review_rating %></p>
+          <p>My Review: <%= booking.review_content %></p>
+
+        <% end %>
       </div>
       <% end %>
     </div>
