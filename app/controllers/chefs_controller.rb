@@ -1,12 +1,15 @@
 class ChefsController < ApplicationController
   def index
-    @chefs = Chef.geocoded
+    if params[:query1].present?
+      @chefs = Chef.search_by_location(params[:query1])
+    else
+      @chefs = Chef.geocoded
 
-    @markers = @chefs.map do |chef|
-      {
-        lat: chef.latitude,
-        lng: chef.longitude
-      }
+      @markers = @chefs.map do |chef|
+        {
+          lat: chef.latitude,
+          lng: chef.longitude
+        }
     end
   end
 
