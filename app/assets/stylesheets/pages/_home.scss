@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 #home-banner{
   text-align: center;
-  background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://res.cloudinary.com/dzjxqunz7/image/upload/v1597679610/chef_gplqgs.jpg");
+  background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5));
   background-size: cover;
   background-position: center;
   padding-top: 30px;
@@ -10,7 +10,7 @@
   font-family: 'roboto';
 
   h1 {
-    animation: text 4s 1;
+    animation: text 3s 1;
     margin: 20px 20px 0px 20px;
     font-size: 50px;
   }
@@ -67,3 +67,12 @@
 .inner-banner {
   margin-top: 30px;
 }
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+

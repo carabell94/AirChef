@@ -1,11 +1,29 @@
 <%= simple_form_for @chef do |f| %>
-  <%= f.input :name %>
-  <%= f.input :bio %>
-  <%= f.input :location %>
-  <%= f.input :years_experience, label: 'Number of Years Experience', collection: 1..50 %>
-  <%= f.input :hourly_rate, label: 'Hourly Rate (£)', input_html: { min: '0', step: 'any' } %>
-  <%= f.input :cuisines %>
-  <%= f.input :photo, as: :file, label: 'Profile Picture' %>
+<div class="row">
+  <div class="col">
+    <%= f.input :name %>
+  </div>
+  <div class="col">
+    <%= f.input :location %>
+  </div>
+</div>
+<%= f.input :bio %>
+<div class="row">
+  <div class="col">
+    <%= f.input :years_experience, label: 'Number of Years Experience', collection: 1..50 %>
+  </div>
+  <div class="col">
+    <%= f.input :hourly_rate, label: 'Hourly Rate (£)', input_html: { min: '0', step: 'any' } %>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+<%= f.input :cuisines %>
+  </div>
+  <div class="col">
+<%= f.input :photo, as: :file, label: 'Profile Picture' %>
+  </div>
+</div>
 
-  <%= f.submit 'Update', class: "btn btn-info mb-3" %>
+<%= f.submit 'Update', class: "btn btn-info mb-3" %>
 <% end %>
