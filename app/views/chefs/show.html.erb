@@ -30,7 +30,9 @@
     <h2 class="book-chef">More Pictures:</h2>
     <div class="dishes">
       <% @chef.dish_photos.each do |photo| %>
-        <%= cl_image_tag photo.key, class: 'cloudinary-img card-dish' %>
+        <% if photo.attached? %>
+          <%= cl_image_tag photo.key, class: 'cloudinary-img card-dish' %>
+        <% end %>
       <% end %>
     </div>
     <button type="button" class="btn btn-info mt-3" data-toggle="modal" data-target="#addDishPictures">

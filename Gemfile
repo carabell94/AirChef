@@ -6,6 +6,8 @@ ruby '2.6.5'
 gem 'cloudinary', '~> 1.12.0'
 gem 'geocoder'
 
+gem 'faker'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use postgresql as the database for Active Record

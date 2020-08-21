@@ -15,7 +15,7 @@
               <% if chef.average_review == "" %>
                 <span id="no-reviews"><em>No reviews yet</em></span>
               <% else %>
-                <%= chef.average_review %> <%= '⭐️' %>
+                <%= chef.average_review.round(1) %> <%= '⭐️' %>
               <% end %>
               </p>
           </div>
