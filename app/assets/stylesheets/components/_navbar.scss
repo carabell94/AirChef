@@ -41,6 +41,9 @@ scroll-behavior: smooth;
   margin: 8px;
   margin-left: 30px;
 }
+.topnav input:focus {
+  outline: none;
+}
 
 #query1 {
 width: 350px;
