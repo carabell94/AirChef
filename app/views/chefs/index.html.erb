@@ -1,12 +1,12 @@
 <div class="main-container text-center">
   <div class="cards-container">
     <h1 class="browse-chefs mt-3">Browse Chefs</h1>
-    <p class="avail-chefs"><em>Chefs Available: </em><%= @chef_count %></p>
+    <p class="avail-chefs"><em>Chefs Available: </em><%= @chefs.count %></p>
     <div class="chef-container">
       <% @chefs.each do |chef| %>
       <div class="chef-profile">
         <% if chef.photo.attached? %>
-          <%= cl_image_tag chef.photo.key, width: 250, height: 250 %>
+          <%= cl_image_tag chef.photo.key, width: 250, height: 250, class: 'card-image' %>
         <% end %>
           <%= link_to chef.name, chef_path(chef), class: 'd-block chef-name'%>
           <div class='chef-details'>
