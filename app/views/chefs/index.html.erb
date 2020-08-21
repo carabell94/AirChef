@@ -11,8 +11,9 @@
           <%= link_to chef.name, chef_path(chef), class: 'd-block chef-name'%>
           <div class='chef-details'>
             <p><strong>Location:</strong> <%= chef.location.split(",").first%></p>
+            <p><strong>Cuisines:</strong> <%= chef.cuisines%></p>
             <p><strong>Hourly Rate:</strong> £<%= chef.hourly_rate.to_i %></p>
-            <p><strong>Rating:</strong>
+            <p>
               <% if chef.average_review == "" %>
                 <span id="no-reviews"><em>No reviews yet</em></span>
               <% else %>
