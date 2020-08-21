@@ -5,6 +5,11 @@
   height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
+  h1 {
+  font-family: 'Pacifico', cursive;
+  color: white;
+  }
 }
 
 .booking {
@@ -39,11 +44,6 @@
 
 .profile-container {
   margin-bottom: 30px;
-}
-
-h1 {
-  font-family: 'Pacifico', cursive;
-  color: white;
 }
 
 p {
