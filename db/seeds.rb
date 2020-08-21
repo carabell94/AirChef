@@ -51,7 +51,7 @@ jakob = Chef.create!(name: "Jakob", bio: 'Unbelievably skilled in the kitchen.',
 
 lu = Chef.create!(name: "Lu",  bio: 'Unbelievably skilled in the kitchen.', years_experience: 10, hourly_rate: 35, location: "Camden, London", cuisines:"Italian, South American, Malaysian")
 
-cara = Chef.create!(name: "Cara",  bio: 'Unbelievably skilled in the kitchen.', years_experience: 30, hourly_rate: 60, location: "Paddington, London", cuisines: "Irish, Thai, Japanese")
+ben = Chef.create!(name: "Ben",  bio: 'Unbelievably skilled in the kitchen.', years_experience: 30, hourly_rate: 60, location: "Paddington, London", cuisines: "Irish, Thai, Japanese")
 
 fernando = Chef.create!(name: "Fernando",  bio: 'Unbelievably skilled in the kitchen.', years_experience: 1, hourly_rate: 15, location: "Fulham, London", cuisines: "Spanish, Lebanese, Mediterranean")
 
