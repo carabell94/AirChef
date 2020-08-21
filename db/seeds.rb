@@ -70,7 +70,7 @@ shaun = Chef.create!(name: "Shaun",  bio: 'Unbelievably skilled in the kitchen.'
 #   chef.save!
 # end
 
-50.times do
+30.times do
   booking = Booking.create(
     user: User.find_by_id(rand(1..4)),
     date: Faker::Date.between(from: '2020-08-01', to: '2020-08-19'),
