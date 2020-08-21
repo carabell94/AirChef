@@ -66,7 +66,7 @@
 <div class="reviews-container container">
   <h2 class="review-header book-chef">Reviews</h2>
   <% @chef.reviews.each do |review| %>
-    <p>⭐️ <%= review.rating %> - "<%= review.content %>"</p>
+    <p><%= review.booking.user.nickname %>⭐️ <%= review.rating %> - "<%= review.content %>"</p>
   <% end %>
 
 </div>
