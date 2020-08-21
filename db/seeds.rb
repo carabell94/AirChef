@@ -8,7 +8,7 @@
 
 require 'faker'
 
-cuisines = %w(mexican italian indian cajun soul thai greek chinese lebanese japanese american moroccan mediterranean french spanish german korean vietnamese turkish caribbean)
+cuisines = %w(Mexican Italian Indian Cajun Soul Thai Greek Chinese Lebanese Japanese American Moroccan Mediterranean French Spanish German Korean Vietnamese Turkish Caribbean)
 london_areas = ['Isle of Dogs', 'Belgravia', 'Blackheath', 'East Finchley', 'Nothing Hill', 'Fulham', 'Richmond', 'Kensington', 'Chelsea', 'Streatham', 'Hammersmith', 'Herne Hill', 'Hampstead', 'Islington', 'Clapham', 'Wandsworth', 'Bethnal Green', 'Crystal Palace', 'Camden', 'Hackney', 'Bermondsey', 'Brixton', 'Peckham', 'Leyton']
 
 cara_user = User.create!(email: "cara@gmail.com", password: "123456")
@@ -107,32 +107,6 @@ end
 
 # user2 = User.create!(email: "user2@user2.com", password: "123456")
 
-
-
-
-
 # private_dinner = Booking.create!(user: User.find_by_id(rand(1..4)), date:Time.now, duration: 5, guests: 2, location:"Madrid", cuisine: "Spanish", chef: Chef.find_by_id(rand(1..10)))
 
 # kids_party = Booking.create!(user: user2, date:Time.now, duration: 5, guests: 30, location:"London", cuisine: "French", chef: arthur)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
