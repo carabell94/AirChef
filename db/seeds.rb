@@ -15,7 +15,7 @@ cara_user = User.create!(nickname: 'Cara', email: "cara@gmail.com", password: "1
 
 lu_user = User.create!(nickname: 'Lu', email: "lu@gmail.com", password: "123456")
 
-shaun_user = User.create!(nickname: 'Shaun', email: "shaun@gmail.com", password: "123456")
+shaun_user = User.create!(nickname: "Shaun", email: "shaun@gmail.com", password: "123456")
 
 fernando_user = User.create!(nickname: 'Fer', email: "fernando@gmail.com", password: "123456")
 
