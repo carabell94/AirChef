@@ -13,13 +13,19 @@
             <p><strong>Location:</strong> <%= chef.location.split(",").first%></p>
             <p><strong>Cuisines:</strong> <%= chef.cuisines%></p>
             <p><strong>Hourly Rate:</strong> £<%= chef.hourly_rate.to_i %></p>
-            <p>
               <% if chef.average_review == "" %>
-                <span id="no-reviews"><em>No reviews yet</em></span>
+                <span id="no-reviews"><em>No rating yet</em></span>
+              <% elsif chef.average_review <= 1 %>
+                <%= image_tag "1star.png", alt: "1-star rating" %>
+              <% elsif chef.average_review <= 2 %>
+                <%= image_tag "2star.png", alt: "2-star rating" %>
+              <% elsif chef.average_review <= 3 %>
+                <%= image_tag "3star.png", alt: "3-star rating" %>
+              <% elsif chef.average_review <= 4 %>
+                <%= image_tag "4star.png", alt: "4-star rating" %>
               <% else %>
-                <%= chef.average_review.round(1) %> <%= '⭐️' %>
+                <%= image_tag "5star.png", alt: "5-star rating" %>
               <% end %>
-              </p>
           </div>
       </div>
     <% end %>
