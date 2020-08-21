@@ -1,8 +1,8 @@
-body {
+.profile-background {
   background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://res.cloudinary.com/dzjxqunz7/image/upload/v1597679610/chef_gplqgs.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -14,7 +14,6 @@ body {
   margin-bottom: 15px;
   box-shadow: 0 0 8px;
   background-color: white;
-
 }
 
 .avatars {
