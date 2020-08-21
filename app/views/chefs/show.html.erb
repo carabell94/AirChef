@@ -41,7 +41,7 @@
 
     <div class="reviews-container mt-5">
       <h2 class="review-header book-chef">Reviews</h2>
-      <%= @chef.reviews.each do |review| %>
+      <% @chef.reviews.each do |review| %>
         <p class="border-bottom border-black nickname pb-2"><%= review.booking.user.nickname %>
           <% if review.rating == 1 %>
             <%= image_tag "1star.png", alt: "1-star rating" %>
@@ -58,7 +58,7 @@
         <p><%= review.content %></p>
       <% end %>
     </div>
-    </div>
+  </div>
 
   <div class="booking-form-container m-3">
     <h2 class="book-chef">Book this Chef</h2>
