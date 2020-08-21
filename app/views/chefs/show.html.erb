@@ -65,8 +65,10 @@
 
 <div class="reviews-container container">
   <h2 class="review-header book-chef">Reviews</h2>
-  <p><%= @review.content %></p>
-  <p><%= @review.content %></p>
+  <% @chef.reviews.each do |review| %>
+    <p>⭐️ <%= review.rating %> - "<%= review.content %>"</p>
+  <% end %>
+
 </div>
 
 <%= render 'modal_add_pictures' %>
