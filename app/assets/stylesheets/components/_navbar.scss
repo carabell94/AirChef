@@ -45,6 +45,10 @@ scroll-behavior: smooth;
   outline: none;
 }
 
+.topnav button:focus {
+  outline: none;
+}
+
 #query1 {
 width: 350px;
 // height: 20px;
