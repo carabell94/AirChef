@@ -26,7 +26,8 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <%= link_to 'Add Services', new_chef_path, class: 'btn btn-info private' %>
+      <%= link_to new_chef_path, class: 'btn btn-info private' do %>Add Services  <i class="fas fa-utensils"></i>
+      <% end %>
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
