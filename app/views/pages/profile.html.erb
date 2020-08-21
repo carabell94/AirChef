@@ -1,5 +1,4 @@
 <div class="container">
-
   <div class="profile-container mt-3 text-center">
     <h1>My Profile</h1>
   </div>
@@ -13,6 +12,7 @@
 
   <div>
     <h1 class="bookings-header mb-4 text-center">My Bookings</h1>
+    <br>
     <div class="bookings">
       <% @bookings.each do |booking| %>
       <div class="booking">
@@ -60,8 +60,9 @@
       </div>
       <% end %>
     </div>
-    <%= link_to "Return to Browse Chefs", chefs_path, class: 'btn btn-info2 mb-3'  %>
-
+    <div class='text-center'>
+      <%= link_to "Return to Browse Chefs", chefs_path, class: 'btn btn-info2 mb-3'  %>
+    </div>
   </div>
 </div>
 
