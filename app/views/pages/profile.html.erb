@@ -31,18 +31,18 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel<%= booking.id %> ">Modal title</h5>
+                  <h5 class="modal-title" id="exampleModalLabel<%= booking.id %> ">Leave a Review</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
                   <%= simple_form_for [booking, Review.new] do |f| %>
+                  <%= f.input :content, label: "Tell us more" %>
                   <%= f.input :rating, collection: (1..5).to_a, label: "Rate your experience" %>
-                  <%= f.input :content %>
                 </div>
                 <div class="modal-footer">
-                  <%= f.button :submit %>
+                  <%= f.button :submit, class: "btn btn-info modal-footer-button" %>
                   <% end %>
                 </div>
               </div>
