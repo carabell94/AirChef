@@ -13,11 +13,13 @@ london_areas = ['Isle of Dogs', 'Belgravia', 'Blackheath', 'East Finchley', 'Not
 
 cara_user = User.create!(nickname: 'Cara', email: "cara@gmail.com", password: "123456")
 
-lu_user = User.create!(nickname: 'Lu', email: "lu@gmail.com", password: "123456")
+lu_user = User.create!(nickname: 'Jess', email: "jess@gmail.com", password: "123456")
 
 shaun_user = User.create!(nickname: "Shaun", email: "shaun@gmail.com", password: "123456")
 
 fernando_user = User.create!(nickname: 'Fer', email: "fernando@gmail.com", password: "123456")
+
+demo_user = User.create!(nickname: 'Lu', email: "lu@gmail.com", password: "123456")
 
 # 10.times do
 #   user = User.create(
