@@ -1,6 +1,7 @@
 <div class="main-container text-center">
   <div class="cards-container">
     <h1 class="browse-chefs mt-3">Browse Chefs</h1>
+    <p class="avail-chefs"><em>Chefs Available: </em><%= @chef_count %></p>
     <div class="chef-container">
       <% @chefs.each do |chef| %>
       <div class="chef-profile">
@@ -10,8 +11,9 @@
           <%= link_to chef.name, chef_path(chef), class: 'd-block chef-name'%>
           <div class='chef-details'>
             <p><strong>Location:</strong> <%= chef.location.split(",").first%></p>
+            <p><strong>Cuisines:</strong> <%= chef.cuisines%></p>
             <p><strong>Hourly Rate:</strong> £<%= chef.hourly_rate.to_i %></p>
-            <p><strong>Rating:</strong>
+            <p>
               <% if chef.average_review == "" %>
                 <span id="no-reviews"><em>No reviews yet</em></span>
               <% else %>

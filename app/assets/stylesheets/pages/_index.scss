@@ -45,7 +45,8 @@
 }
 
 .chef-profile:hover {
-  transform: scale(1.1)
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 .private {
@@ -79,3 +80,6 @@
   font-size: 12px;
 }
 
+.avail-chefs {
+  font-size: 12px;
+}

@@ -1,3 +1,4 @@
 <h2 class="map-popup-chef"><%= chef.name %></h2>
-<p><%= chef.location %></p>
+<p id="area-popup"><%= chef.location %></p>
+<p id="cuisine-popup"><strong>Cuisine(s): </strong><%= chef.cuisines %></p>
 <%= link_to 'See Chef Profile', chef_path(chef), class: 'btn btn-info' %>
