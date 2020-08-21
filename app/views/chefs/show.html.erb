@@ -27,17 +27,39 @@
   </div>
 
   <div class="mt-3">
-    <h2 class="book-chef">More Pictures</h2>
-    <div class="dishes">
-      <% @chef.dish_photos.each do |photo| %>
-        <% if photo.attached? %>
-          <%= cl_image_tag photo.key, class: 'cloudinary-img card-dish' %>
+    <div>
+      <h2 class="book-chef">More Pictures</h2>
+      <div class="dishes">
+        <% @chef.dish_photos.each do |photo| %>
+
+            <%= cl_image_tag photo.key, class: 'cloudinary-img card-dish' %>
+
         <% end %>
-      <% end %>
+      </div>
+      <button type="button" class="btn btn-info2 mt-3" data-toggle="modal" data-target="#addDishPictures">
+      Add Photos
+      </button>
     </div>
-    <button type="button" class="btn btn-info2 mt-3" data-toggle="modal" data-target="#addDishPictures">
-    Add Photos
-    </button>
+
+  <div class="reviews-container mt-5">
+    <h2 class="review-header book-chef">Reviews</h2>
+    <% @chef.reviews.each do |review| %>
+      <p class="border-bottom border-black nickname pb-2"><%= review.booking.user.nickname %> -
+        <% if review.rating == 1 %>
+          <%= image_tag "1star.png", alt: "1-star rating" %>
+        <% elsif review.rating == 2 %>
+          <%= image_tag "2star.png", alt: "2-star rating" %>
+        <% elsif review.rating == 3 %>
+          <%= image_tag "3star.png", alt: "3-star rating" %>
+        <% elsif review.rating == 4 %>
+          <%= image_tag "4star.png", alt: "4-star rating" %>
+        <% else %>
+          <%= image_tag "5star.png", alt: "5-star rating" %>
+        <% end %>
+      </p>
+      <p>"<%= review.content %>"</p>
+    <% end %>
+  </div>
   </div>
 
   <div class="booking-form-container m-3">
@@ -60,14 +82,9 @@
       <% end %>
     </div>
   </div>
-
 </div>
 
-<div class="reviews-container container">
-  <h2 class="review-header book-chef">Reviews</h2>
-  <% @chef.reviews.each do |review| %>
-    <p>⭐️ <%= review.rating %> - "<%= review.content %>"</p>
-  <% end %>
+<div>
 
 </div>
 
