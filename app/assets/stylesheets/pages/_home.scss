@@ -12,7 +12,7 @@
   h1 {
     animation: text 3s 1;
     margin: 20px 20px 0px 20px;
-    font-size: 50px;
+    font-size: 64px;
   }
 
   @keyframes text {
@@ -52,7 +52,6 @@
   p {
     font-size: 18px;
     color: rgb(230, 230, 230);
-    margin-top: 0px;
   }
 
   #private-chef {
@@ -65,7 +64,7 @@
 }
 
 .inner-banner {
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 #myVideo {
@@ -74,5 +73,8 @@
   bottom: 0;
   width: 100%;
   z-index: -1;
+}
+
+.discover-chefs {
 }
 
