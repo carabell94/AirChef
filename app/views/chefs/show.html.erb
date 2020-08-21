@@ -41,11 +41,12 @@
 
     <div class="reviews-container mt-5">
       <h2 class="review-header book-chef">Reviews</h2>
-      <%= @chef.reviews.each do |review| %>
+        <% if @chef.reviews.empty? %>
+          <p><em>No Reviews Yet </em>☹️</p>
+        <% end %>
+      <% @chef.reviews.each do |review| %>
         <p class="border-bottom border-black nickname pb-2"><%= review.booking.user.nickname %>
-          <% if @review.rating.nil? %>
-            <p><em>No Reviews Yet!</em></p>
-          <% elsif review.rating == 1 %>
+          <% if review.rating == 1 %>
             <%= image_tag "1star.png", alt: "1-star rating" %>
           <% elsif review.rating == 2 %>
             <%= image_tag "2star.png", alt: "2-star rating" %>
