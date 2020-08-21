@@ -53,7 +53,7 @@
           <p id="review-submitted"><em>Review submitted!</em><%= link_to 'Book Again?', chef_path(booking.chef), class: 'btn btn-info book-again' %></p>
         <% else booking.date > Time.now %>
         <p><strong>---------------------------------------</strong></p>
-        <%= link_to 'Cancel', profile_path, method: :delete, data: { confirm: "Are you sure you want to cancel this booking?" }, class: 'btn btn-danger'  %>
+        <%= link_to 'Cancel', booking_path(booking), method: :delete, data: { confirm: "Are you sure you want to cancel this booking?" }, class: 'btn btn-danger'  %>
         <% end %>
       </div>
       <% end %>
