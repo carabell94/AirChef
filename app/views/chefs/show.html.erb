@@ -27,7 +27,7 @@
   </div>
 
   <div class="mt-3">
-    <h2 class="book-chef">More Pictures:</h2>
+    <h2 class="book-chef">More Pictures</h2>
     <div class="dishes">
       <% @chef.dish_photos.each do |photo| %>
         <% if photo.attached? %>
@@ -41,7 +41,7 @@
   </div>
 
   <div class="booking-form-container m-3">
-    <h2 class="book-chef">Book this Chef:</h2>
+    <h2 class="book-chef">Book this Chef</h2>
     <div class='booking-form'>
 
       <%= simple_form_for [ @chef, @booking ] do |f| %>
@@ -60,6 +60,14 @@
       <% end %>
     </div>
   </div>
+
+</div>
+
+<div class="reviews-container container">
+  <h2 class="review-header book-chef">Reviews</h2>
+  <% @chef.reviews.each do |review| %>
+    <p>⭐️ <%= review.rating %> - "<%= review.content %>"</p>
+  <% end %>
 
 </div>
 

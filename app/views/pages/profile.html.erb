@@ -16,13 +16,13 @@
       <div class="booking">
         <p><strong>Chef Name:</strong> <%= link_to booking.chef.name, chef_path(booking.chef), class: 'no-decoration' %></p>
         <p><strong>Date:</strong> <%= booking.date.strftime("%d %B %Y") %></p>
-        <p><strong>Cuisine:</strong> <%= booking.cuisine %></p>
+        <p><strong>Cuisine:</strong> <%= booking.cuisine.capitalize %></p>
         <p><strong>Location:</strong> <%= booking.location.capitalize %></p>
         <p><strong>Number of Guests:</strong> <%= booking.guests %></p>
         <% if booking.date < Time.now && booking.reviews.empty? %>
           <p><strong>---------------------------------------</strong></p>
           <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal<%= booking.id %>">
-            Leave Review ⭐️
+            Leave Review
           </button>
           <!-- Button trigger modal -->
 
@@ -50,7 +50,7 @@
           </div>
         <% elsif booking.date < Time.now %>
           <p><strong>---------------------------------------</strong></p>
-          <p id="review-submitted"><em>Review submitted!</em><%= link_to 'Book Again?', chef_path(booking.chef), class: 'btn btn-info book-again' %></p>
+          <p id="review-submitted"><em>Review Submitted!</em><%= link_to 'Book Again?', chef_path(booking.chef), class: 'btn btn-info book-again' %></p>
         <% else booking.date > Time.now %>
         <p><strong>---------------------------------------</strong></p>
         <%= link_to 'Cancel', booking_path(booking), method: :delete, data: { confirm: "Are you sure you want to cancel this booking?" }, class: 'btn btn-danger'  %>
