@@ -1,3 +1,7 @@
+<!-- Don't delete, meta info -->
+<% content_for :meta_title, "#{@chef.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @chef.location %>
+
 <div class="chef-profile-page-container mb-5">
   <div class='chef-info ml-3'>
     <% if @chef.photo.attached? %>
