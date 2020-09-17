@@ -9,7 +9,7 @@ class ChefsController < ApplicationController
             lat: chef.latitude,
             lng: chef.longitude,
             infoWindow: render_to_string(partial: "info_window", locals: { chef: chef }),
-            image_url: "https://res.cloudinary.com/dzjxqunz7/image/upload/v1597931839/knifefork_ywuj7u.png"
+            image_url: "https://res.cloudinary.com/dzjxqunz7/image/upload/q_auto,f_auto,fl_lossy/v1597931839/knifefork_ywuj7u.png"
           }
         end
     else
@@ -20,7 +20,7 @@ class ChefsController < ApplicationController
             lat: chef.latitude,
             lng: chef.longitude,
             infoWindow: render_to_string(partial: "info_window", locals: { chef: chef }),
-            image_url: "https://res.cloudinary.com/dzjxqunz7/image/upload/v1597931839/knifefork_ywuj7u.png"
+            image_url: "https://res.cloudinary.com/dzjxqunz7/image/upload/q_auto,f_auto,fl_lossy/v1597931839/knifefork_ywuj7u.png"
           }
         end
     end
