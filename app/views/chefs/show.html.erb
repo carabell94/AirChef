@@ -5,7 +5,7 @@
 <div class="chef-profile-page-container mb-5">
   <div class='chef-info ml-3'>
     <% if @chef.photo.attached? %>
-    <%= cl_image_tag @chef.photo.key, width: 360, class: 'cloudinary-img' %>
+    <%= cl_image_tag @chef.photo.key, width: 360, fetch_format: :auto, quality: :auto, class: 'cloudinary-img' %>
     <% end %>
 
     <!-- Chef Bio -->
@@ -35,7 +35,7 @@
       <h2 class="book-chef">More Pictures</h2>
       <div class="dishes">
         <% @chef.dish_photos.each do |photo| %>
-          <%= cl_image_tag photo.key, class: 'cloudinary-img card-dish' %>
+          <%= cl_image_tag photo.key, fetch_format: :auto, quality: :auto, class: 'cloudinary-img card-dish' %>
         <% end %>
       </div>
       <button type="button" class="btn btn-info2 mt-3" data-toggle="modal" data-target="#addDishPictures">

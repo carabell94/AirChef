@@ -6,7 +6,7 @@
       <% @chefs.each do |chef| %>
       <div class="chef-profile">
         <% if chef.photo.attached? %>
-          <%= cl_image_tag chef.photo.key, width: 220, height: 220, class: 'card-image' %>
+          <%= cl_image_tag chef.photo.key, width: 220, height: 220, fetch_format: :auto, quality: :auto, class: 'card-image' %>
         <% end %>
           <%= link_to chef.name, chef_path(chef), class: 'd-block chef-name'%>
           <div class='chef-details'>
