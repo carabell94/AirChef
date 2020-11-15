@@ -11,7 +11,7 @@ require 'faker'
 cuisines = %w(Mexican Italian Indian Cajun Soul Thai Greek Chinese Lebanese Japanese American Moroccan Mediterranean French Spanish German Korean Vietnamese Turkish Caribbean)
 london_areas = ['Isle of Dogs', 'Belgravia', 'Blackheath', 'East Finchley', 'Nothing Hill', 'Fulham', 'Richmond', 'Kensington', 'Chelsea', 'Streatham', 'Hammersmith', 'Herne Hill', 'Hampstead', 'Islington', 'Clapham', 'Wandsworth', 'Bethnal Green', 'Crystal Palace', 'Camden', 'Hackney', 'Bermondsey', 'Brixton', 'Peckham', 'Leyton']
 
-cara_user = User.create!(nickname: 'Cara', email: "cara@gmail.com", password: "123456")
+cara_user = User.create!(nickname: 'Cara', email: "cara@hotmail.com", password: "123456")
 
 lu_user = User.create!(nickname: 'Jess', email: "jess@gmail.com", password: "123456")
 
@@ -49,7 +49,7 @@ rebecca = Chef.create!(name: "Rebecca", bio: 'Unbelievably skilled in the kitche
 
 leonard = Chef.create!(name: "Leonard", bio: 'Unbelievably skilled in the kitchen.',  years_experience:20, hourly_rate: 100, location: "Covent Garden, London", cuisines: "Vietnamese, Italian, Mexican")
 
-jakob = Chef.create!(name: "Jakob", bio: 'Unbelievably skilled in the kitchen.',  years_experience:20, hourly_rate: 100, location: "Holland Park, London", cuisines: "French, Italian, Mexican")
+ife = Chef.create!(name: "Ife", bio: 'Unbelievably skilled in the kitchen.',  years_experience:20, hourly_rate: 100, location: "Holland Park, London", cuisines: "French, Italian, Mexican")
 
 lu = Chef.create!(name: "Lu",  bio: 'Unbelievably skilled in the kitchen.', years_experience: 10, hourly_rate: 35, location: "Camden, London", cuisines:"Italian, South American, Malaysian")
 
@@ -99,7 +99,7 @@ count = 0
 Booking.all.each do |book|
   review = Review.create(
     rating: rand(1..5),
-    content: Faker::Lorem.words(number: rand(10..50)).join(' '),
+    content: Faker::TvShows::GameOfThrones.quote,
     booking: Booking.find_by_id(book.id)
   )
   review.save!
