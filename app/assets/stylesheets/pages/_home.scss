@@ -9,6 +9,10 @@
   height: 100vh;
   font-family: 'roboto';
 
+  @media (max-width: 420px) {
+    margin-top: 10px;
+  }
+
   h1 {
     animation: text 3s 1;
     margin: 20px 20px 0px 20px;
@@ -56,6 +60,10 @@
 
   #private-chef {
     font-family: 'pacifico', cursive;
+
+    @media (max-width: 420px) {
+      font-size: 40px;
+    }
   }
 }
 
@@ -75,6 +83,10 @@
   z-index: -1;
 }
 
-.discover-chefs {
+.remove-break {
+
+  @media (max-width: 420px) {
+    display: none;
+  }
 }
 

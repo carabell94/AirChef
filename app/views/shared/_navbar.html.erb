@@ -3,6 +3,10 @@
     <%= image_tag "https://res.cloudinary.com/dzjxqunz7/image/upload/q_auto,f_auto,fl_lossy/v1597678290/airchef-logo_nwhdmx.png", class: 'airchef-logo' %>
     <% end %>
 
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
 <div class="topnav">
   <div class="search-container">
     <div class="row justify-content-center">
@@ -21,12 +25,8 @@
   </div>
 </div>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <%= link_to new_chef_path, class: 'btn btn-info private' do %>Add Services  <i class="fas fa-utensils"></i>
+      <%= link_to new_chef_path, class: 'btn btn-info private btn-stick-to-right' do %>Add Services  <i class="fas fa-utensils"></i>
       <% end %>
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
@@ -39,7 +39,7 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link btn btn-info private log-in" %>
+          <%= link_to "Login", new_user_session_path, class: "nav-link btn btn-info private log-in btn-stick-to-right2" %>
         </li>
       <% end %>
     </ul>

@@ -32,6 +32,10 @@ scroll-behavior: smooth;
   border: none;
   cursor: pointer;
   padding: 2px 8px;
+
+  @media (max-width: 420px) {
+    display: none;
+  }
 }
 .topnav input[type=text] {
   padding: 10px;
@@ -52,6 +56,10 @@ scroll-behavior: smooth;
 #query1 {
 width: 350px;
 // height: 20px;
+
+  @media (max-width: 420px) {
+      display: none;
+    }
 }
 
 .search-container {
@@ -99,6 +107,11 @@ color: white;
     box-shadow: 1px 1px -1px -1px 10px;
     color: black!important;
   }
+
+  @media (max-width: 420px) {
+    display: inline-block;
+    text-align: center;
+  }
 }
 .navbar {
   padding: 0!important;
@@ -110,4 +123,22 @@ width: 45px;
 
 .fa-arrow-circle-up {
   color: white;
+}
+
+.btn-stick-to-right {
+  margin-left: 70vw;
+  margin-top: 8px !important;
+}
+
+.btn-stick-to-right2 {
+  margin-left: 81vw;
+  // margin-top: 8px !important;
+}
+
+.navbar-toggler {
+  @media (max-width: 420px) {
+    position: fixed;
+    right: 8px;
+    margin-bottom: 5px;
+  }
 }
