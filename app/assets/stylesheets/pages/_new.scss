@@ -11,6 +11,11 @@
 
 #chef_photo {
   padding-left: 40px;
+
+  @media (max-width: 420px) {
+    font-size: 10px;
+    padding-left: 0px;
+  }
 }
 
 .btn-smaller {
@@ -32,4 +37,8 @@
   margin: 0 auto;
   border-radius: 20px;
   color: black;
+
+  @media (max-width: 420px) {
+    width: 90% !important;
+  }
 }
