@@ -17,6 +17,10 @@
   width: 28%;
   margin: 0px 24px 24px 24px;
 
+    @media (max-width: 420px) {
+      width: 255px;
+    }
+
     .chef-name {
     font-size: 32px;
     color: #051a23;
@@ -91,4 +95,10 @@
 
 .card-image {
   object-fit: cover;
+}
+
+.mapboxgl-canvas, #map {
+  @media (max-width: 420px) {
+    display: none;
+  }
 }
