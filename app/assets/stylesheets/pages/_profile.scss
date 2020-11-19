@@ -19,6 +19,10 @@
   margin-bottom: 15px;
   box-shadow: 0 0 8px;
   background-color: white;
+
+  @media (max-width: 420px) {
+    margin-bottom: 0px;
+  }
 }
 
 .avatars {
@@ -29,6 +33,10 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   margin-bottom: 30px;
+
+  @media (max-width: 420px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .profile {
@@ -40,6 +48,10 @@
   box-shadow: 0 0 8px;
   margin: 0 auto;
   background-color: white;
+
+  @media (max-width: 420px) {
+    width: 75%;
+  }
 }
 
 .profile-container {
@@ -70,4 +82,15 @@ p {
 
 .book-again {
   margin-left: 8px;
+
+  @media (max-width: 420px) {
+    font-size: 12px;
+    margin-top: 4px !important;
+  }
+}
+
+.dotted-line {
+  @media (max-width: 420px) {
+    font-size: 6px;
+  }
 }

@@ -23,7 +23,7 @@
         <p><strong>Location:</strong> <%= booking.location.split.map(&:capitalize).join(' ') %></p>
         <p><strong>Number of Guests:</strong> <%= booking.guests %></p>
         <% if booking.date < Time.now && booking.reviews.empty? %>
-          <p><strong>---------------------------------------</strong></p>
+          <p class="dotted-line"><strong>---------------------------------------</strong></p>
           <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal<%= booking.id %>">
             Leave Review
           </button>
@@ -52,10 +52,10 @@
             </div>
           </div>
         <% elsif booking.date < Time.now %>
-          <p><strong>---------------------------------------</strong></p>
-          <p id="review-submitted"><em>Review Submitted!</em><%= link_to 'Book Again?', chef_path(booking.chef), class: 'btn btn-info book-again' %></p>
+          <p class="dotted-line"><strong>---------------------------------------</strong></p>
+          <p class="review-submitted"><em>Review Submitted!</em><%= link_to 'Book Again?', chef_path(booking.chef), class: 'btn btn-info book-again' %></p>
         <% else booking.date > Time.now %>
-        <p><strong>---------------------------------------</strong></p>
+        <p id="dotted-line"><strong>---------------------------------------</strong></p>
         <%= link_to 'Cancel', booking_path(booking), method: :delete, data: { confirm: "Are you sure you want to cancel this booking?" }, class: 'btn btn-danger'  %>
         <% end %>
       </div>
