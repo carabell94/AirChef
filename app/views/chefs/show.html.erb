@@ -5,7 +5,7 @@
 <div class="chef-profile-page-container mb-5">
   <div class='chef-info ml-3'>
     <% if @chef.photo.attached? %>
-    <%= cl_image_tag @chef.photo.key, width: 360, fetch_format: :auto, quality: :auto, class: 'cloudinary-img' %>
+    <%= cl_image_tag @chef.photo.key, width: 360, fetch_format: :auto, quality: :auto, class: 'cloudinary-img responsive-img-phone' %>
     <% end %>
 
     <!-- Chef Bio -->

@@ -30,6 +30,11 @@ display: none;
 
 .chef-info {
   width: 25%;
+
+  @media (max-width: 420px) {
+    margin-left: 0 !important;
+    width: 75%;
+  }
 }
 
 .cloudinary-img {
@@ -44,6 +49,11 @@ display: none;
 
 .booking-form-container {
   width: 30%;
+
+  @media (max-width: 420px) {
+    margin-left: 0 !important;
+    width: 75%;
+  }
 }
 
 .chef-profile-page-container {
@@ -53,5 +63,11 @@ display: none;
 }
 
 .chef-profile {
-border-radius: 20px;
+  border-radius: 20px;
 }
+
+.responsive-img-phone {
+  height: 180px;
+  width: 180px;
+}
+

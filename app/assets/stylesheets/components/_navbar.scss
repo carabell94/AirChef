@@ -118,7 +118,11 @@ color: white;
 }
 
 .avatar {
-width: 45px;
+  width: 45px;
+
+  @media (max-width: 420px) {
+    margin-left: 355px;
+  }
 }
 
 .fa-arrow-circle-up {
@@ -126,13 +130,17 @@ width: 45px;
 }
 
 .btn-stick-to-right {
-  margin-left: 70vw;
-  margin-top: 8px !important;
+  @media (max-width: 420px) {
+    margin-left: 70vw;
+    margin-top: 8px !important;
+  }
 }
 
 .btn-stick-to-right2 {
-  margin-left: 81vw;
+  @media (max-width: 420px) {
+    margin-left: 81vw;
   // margin-top: 8px !important;
+  }
 }
 
 .navbar-toggler {
