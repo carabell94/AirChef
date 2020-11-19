@@ -11,6 +11,7 @@
 
   @media (max-width: 420px) {
     margin-top: 10px;
+    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://res.cloudinary.com/dzjxqunz7/image/upload/q_auto,f_auto,fl_lossy/v1597679610/chef_gplqgs.jpg");
   }
 
   h1 {
@@ -81,6 +82,10 @@
   bottom: 0;
   width: 100%;
   z-index: -1;
+
+  @media (max-width: 420px) {
+    display: none;
+  }
 }
 
 .remove-break {
