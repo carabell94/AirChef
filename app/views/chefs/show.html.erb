@@ -50,17 +50,7 @@
         <% end %>
       <% @chef.reviews.each do |review| %>
         <p class="border-bottom border-black nickname pb-2"><%= review.booking.user.nickname %>
-          <% if review.rating == 1 %>
-            <%= image_tag "1star.png", alt: "1-star rating" %>
-          <% elsif review.rating == 2 %>
-            <%= image_tag "2star.png", alt: "2-star rating" %>
-          <% elsif review.rating == 3 %>
-            <%= image_tag "3star.png", alt: "3-star rating" %>
-          <% elsif review.rating == 4 %>
-            <%= image_tag "4star.png", alt: "4-star rating" %>
-          <% else %>
-            <%= image_tag "5star.png", alt: "5-star rating" %>
-          <% end %>
+          <%= image_tag "#{review.rating}star.png", alt: "#{review.rating}-star rating" %>
         </p>
         <p><%= review.content %></p>
       <% end %>
