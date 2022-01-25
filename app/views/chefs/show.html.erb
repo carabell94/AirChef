@@ -46,7 +46,7 @@
     <div class="reviews-container mt-5">
       <h2 class="review-header book-chef">Reviews</h2>
         <% if @chef.reviews.empty? %>
-          <p><em>No Reviews Yet </em>☹️</p>
+          <p><em>No Reviews Yet! </em>☹️</p>
         <% end %>
       <% @chef.reviews.each do |review| %>
         <p class="border-bottom border-black nickname pb-2"><%= review.booking.user.nickname %>
