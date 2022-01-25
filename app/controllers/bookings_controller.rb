@@ -28,7 +28,7 @@ class BookingsController < ApplicationController
   end
 
   def update
-    @booking = Booking.find(params[:id])
+    find_booking
     if @booking.update(strong_params)
       redirect_to profile_path
     else
@@ -37,12 +37,16 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    @booking = Booking.find(params[:id])
+    find_booking
     @booking.destroy
     redirect_to profile_path
   end
 
   private
+
+  def find_booking
+    @booking = Booking.find(params[:id])
+  end
 
   def strong_params
     params.require(:booking).permit(:user_id, :date, :guests, :location, :cuisine, :chef_id, :review_rating, :review_content, :duration)
